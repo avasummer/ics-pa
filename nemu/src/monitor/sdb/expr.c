@@ -242,23 +242,23 @@ word_t eval(int p,int q,bool *success)
   return 0;
 }
 
-word_t expr(char *e, bool *success) {
-    memset(tokens, 0, sizeof(tokens));
-    if (!make_token(e)) {
-      *success = false;
-      return 0;
-    }
+word_t expr(char *e, bool *success)
+{
+  memset(tokens, 0, sizeof(tokens));
+  if (!make_token(e)) {
+    *success = false;
+    return 0;
+  }
   for (int i = 0; i < nr_token; i ++) {
     if (tokens[i].type == '*' && (i == 0 ||
       (tokens[i - 1].type != TK_RIGHT_PAREN &&
        tokens[i - 1].type != TK_DEC &&
        tokens[i - 1].type != TK_HEX)) ) {
       tokens[i].type = DEREF;
-    }
+       }
   }
   printf("nr%d\n",nr_token);
   word_t result=eval(0,nr_token-1,success);
-  if (*success)printf("%d\n",result);
-    /* TODO: Insert codes to evaluate the expression. */
-    return 0;
-  }
+  if (*success)return result;
+  return 0;
+}
