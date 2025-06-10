@@ -1,0 +1,256 @@
+[33mcommit cb7fe559c2244e5751aed07cc99113ac68f6086e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mpa0[m[33m)[m
+Author: tracer-ics2024 <tracer@njuics.org>
+Date:   Tue Mar 11 20:44:34 2025 +0800
+
+    >  gdb NEMU
+    111 222
+    Linux ubuntu-VMware-Virtual-Platform 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+     20:44:34 up 30 min,  1 user,  load average: 0.19, 0.32, 0.27
+
+[33mcommit 65940dac9b7c2dad77ff7a4717fb8bb8970d1769[m
+Author: tracer-ics2024 <tracer@njuics.org>
+Date:   Tue Mar 11 20:44:34 2025 +0800
+
+    >  compile NEMU
+    111 222
+    Linux ubuntu-VMware-Virtual-Platform 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+     20:44:34 up 30 min,  1 user,  load average: 0.19, 0.32, 0.27
+
+[33mcommit eae457acf25ae98bc8b0cf5520a9f155c310303f[m
+Author: tracer-ics2024 <tracer@njuics.org>
+Date:   Tue Mar 11 20:43:37 2025 +0800
+
+    >  run NEMU
+    111 222
+    Linux ubuntu-VMware-Virtual-Platform 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+     20:43:37 up 29 min,  1 user,  load average: 0.48, 0.38, 0.29
+
+[33mcommit 5bdbbb58c8a67c854fc059c2dadd9e0d116577c1[m
+Author: tracer-ics2024 <tracer@njuics.org>
+Date:   Tue Mar 11 20:43:37 2025 +0800
+
+    >  compile NEMU
+    111 222
+    Linux ubuntu-VMware-Virtual-Platform 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+     20:43:37 up 29 min,  1 user,  load average: 0.48, 0.38, 0.29
+
+[33mcommit 7440228195ecf9a2ec4f5b3ce1ec6f841b27ebee[m
+Author: tracer-ics2024 <tracer@njuics.org>
+Date:   Tue Mar 11 20:43:27 2025 +0800
+
+    >  compile NEMU
+    111 222
+    Linux ubuntu-VMware-Virtual-Platform 6.8.0-52-generic #53-Ubuntu SMP PREEMPT_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+     20:43:27 up 29 min,  1 user,  load average: 0.56, 0.40, 0.30
+
+[33mcommit af344ada7e03d1e0b810a55b2f885af253decb0f[m
+Author: avasummer <moonafterrain@outlook.com>
+Date:   Tue Mar 11 20:19:33 2025 +0800
+
+    mod
+
+[33mcommit c937435d821b3aaf179dfeb73a43b65d82ea2272[m[33m ([m[1;32mmaster[m[33m)[m
+Author: avasummer <moonafterrain@outlook.com>
+Date:   Mon Mar 10 14:11:12 2025 +0800
+
+    NJU-ProjectN/fceux-am ics2021 initialized without tracing
+    
+    NJU-ProjectN/fceux-am 9b167e7e47240cd8ef9a910242242c28affb713a fceu: remove unused function to fix linking error when SOUND_NONE
+
+[33mcommit 37e548b48ad3547c6bbcb1b063f507290622f85a[m
+Author: avasummer <moonafterrain@outlook.com>
+Date:   Mon Mar 10 14:11:04 2025 +0800
+
+    NJU-ProjectN/abstract-machine ics2024 initialized
+    
+    NJU-ProjectN/abstract-machine a7b830fedd86505e8accba8f4b928084542c841a feat: riscv64 linux support
+
+[33mcommit 4b5f3aedf0a1d023d4b10a717f279880a297a7be[m
+Author: avasummer <moonafterrain@outlook.com>
+Date:   Mon Mar 10 14:10:49 2025 +0800
+
+    NJU-ProjectN/nemu ics2024 initialized
+    
+    NJU-ProjectN/nemu e69f07f1a5bb4e754fd932eb5c668857543ca2eb x86,inst: fix dnpc
+
+[33mcommit 5ddac2e81f291f37a9f8734b25a41a26be7cfecf[m[33m ([m[1;31morigin/HEAD[m[33m, [m[1;31morigin/2024[m[33m)[m
+Merge: 0688e95 28c324d
+Author: Zihao Yu <19884013+sashimi-yzh@users.noreply.github.com>
+Date:   Mon Sep 2 13:44:57 2024 +0800
+
+    Merge pull request #31 from iyht/2024
+    
+    fix: use echo -e to escape newline
+
+[33mcommit 28c324d6b69aad1d423ce8bd93775492b38fc16f[m
+Author: Haotian Yang <haotian.yang.cs@gmail.com>
+Date:   Mon Sep 2 05:27:03 2024 +0000
+
+    fix: use echo -e to escape newline
+
+[33mcommit 0688e95dde07c6ea866ccfb07a8affa73ef15b53[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sat Aug 31 09:55:39 2024 +0800
+
+    ready for ics2024
+
+[33mcommit f5f23e1a43d24a0b2191f943d74d0c024dae6357[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sun Aug 25 12:59:47 2024 +0800
+
+    init.sh: add newline before export
+
+[33mcommit 722f8e81920fe092b36faa935c695136bbca888f[m[33m ([m[1;31morigin/2023[m[33m)[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Aug 30 17:05:59 2023 +0800
+
+    ready for ics2023
+
+[33mcommit 30cae09be463780d137d34913fd23608f01628fe[m[33m ([m[1;31morigin/2022[m[33m)[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Thu Nov 24 19:18:13 2022 +0800
+
+    README: fix URL
+
+[33mcommit 246aab344d84efd288f7207802e3cbf570d235f3[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sun Sep 4 22:11:57 2022 +0800
+
+    Makefile: add git function
+
+[33mcommit e2c722ddb1e81a1741f6768753ace88a26a58c44[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sun Sep 4 22:11:09 2022 +0800
+
+    init.sh: refactor
+
+[33mcommit cf4bd2fd797445706922c73948b713ace214761c[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sat Sep 3 01:48:52 2022 +0800
+
+    Makefile: update submit URL
+
+[33mcommit 0cf0dcf5e85d0517714d90a8c3a2eb03314cd89d[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Jan 19 20:09:20 2022 +0800
+
+    ready for ics2022
+
+[33mcommit 3afe44fdfd8d613d3718491d1912542b69adaffa[m[33m ([m[1;31morigin/2021[m[33m)[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Mon Aug 16 17:21:10 2021 +0800
+
+    ready for ics2021
+
+[33mcommit 38f8b8a966b3832ecb9df877764821a4912c0ed6[m[33m ([m[1;31morigin/2020[m[33m)[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Fri Sep 4 10:55:21 2020 +0800
+
+    ready for ics2020
+
+[33mcommit c3969eab6783f2f7f93d82e050e54bdd57d18a6c[m[33m ([m[1;31morigin/2019[m[33m)[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Tue Sep 10 21:53:38 2019 +0800
+
+    .gitignore: add Makefile.* under nexus-am/ and navy-apps/
+    
+    * add everything under these directories to let their .gitignore file to
+      determine the ignore rules
+
+[33mcommit e050a85dc0ee27a511b6b0425bd104b47e47b278[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Tue Sep 10 21:52:19 2019 +0800
+
+    init.sh: add prompt to run `source ~/.bashrc`
+    
+    * The source command in the script does not take effect, since it is run
+      by a new bash command.
+
+[33mcommit 54f2705ce06fec51a8e541fb2c96b27ceddb1a0f[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Sep 4 17:58:01 2019 +0800
+
+    Makefile: update submit URL
+
+[33mcommit dd2552ba12279cc3809ff55f042c2fccdc3f6bf9[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Mon Apr 1 18:26:33 2019 +0800
+
+    init.sh: fix typo
+
+[33mcommit 184116c7e85aaa4829b6de489cde008cdd1cbef3[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sun Mar 31 22:48:42 2019 +0800
+
+    ready for ics2019
+
+[33mcommit 06275bd7d20bdbdab5f8ab23770362d7f442a4e9[m[33m ([m[1;31morigin/2018[m[33m)[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sun Mar 31 22:47:32 2019 +0800
+
+    ready for ics2018
+
+[33mcommit 5b5b182ef51f58176117571d6b4780eb312b263a[m[33m ([m[1;31morigin/2017[m[33m)[m
+Merge: a811862 a7f5ac6
+Author: Zihao Yu <19884013+sashimi-yzh@users.noreply.github.com>
+Date:   Sat Feb 10 15:13:59 2018 +0800
+
+    Merge pull request #2 from CURAS/patch-1
+    
+    Typo
+
+[33mcommit a7f5ac6cb38888516858918b60fa669c53f0119d[m
+Author: CURAS <3398519433@qq.com>
+Date:   Sat Feb 10 11:19:34 2018 +0800
+
+    Typo
+
+[33mcommit a8118623d11f2c540825821d29d1737b1f714c8b[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Sat Aug 26 11:50:37 2017 +0800
+
+    init.sh: add retry
+
+[33mcommit 7d0c8943ce4ee05eda975d3c29678ac25fc59af4[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Fri Aug 25 17:24:20 2017 +0800
+
+    add README.md
+
+[33mcommit bfdc521994b2df6e29920ae635aa78920936eff4[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Aug 23 22:41:17 2017 +0800
+
+    init.sh: record the HEADs of each subproject in the initialization commit log
+
+[33mcommit d53485895c5fe21c9b5aafd31bf06f7f7ba681ff[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Aug 23 22:40:35 2017 +0800
+
+    init.sh: use readlink to get absolute path
+    
+    * ubuntu may not have realpath installed by default
+
+[33mcommit ae4e3e77574ebce23ad4f2d8b212f16ed775c5f4[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Aug 23 16:03:56 2017 +0800
+
+    init.sh: source bashrc
+
+[33mcommit 1f274c0dd14e79370c7df1e743bec5326d3fe6a4[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Aug 23 16:03:14 2017 +0800
+
+    Makefile: print a message by default, instead of cleaning everything
+
+[33mcommit 650f6930847f41c6c921806c27ed34ca75ebbeee[m
+Author: yzh <yuzihao@ict.ac.cn>
+Date:   Thu Aug 17 00:21:47 2017 +0800
+
+    Makefile: fix tar path
+
+[33mcommit 322acff6af13038101c6d0647873e6fd7b88f516[m
+Author: Zihao Yu <yuzihao@ict.ac.cn>
+Date:   Wed Aug 16 20:57:54 2017 +0800
+
+    first commit

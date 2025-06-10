@@ -1,0 +1,7 @@
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/ics2024.dir
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/nemu-main.dir
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/expr.dir
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/sdb.dir
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/gen-expr.dir
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/summer/ics2024/cmake-build-debug/CMakeFiles/rebuild_cache.dir
