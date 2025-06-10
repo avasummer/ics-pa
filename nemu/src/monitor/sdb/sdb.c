@@ -70,7 +70,6 @@ static int cmd_si(char *args) {
 
 static int cmd_w(char *args) {
    if(args == NULL)return 0;
-
    new_wp(args);
    return 0;
 }

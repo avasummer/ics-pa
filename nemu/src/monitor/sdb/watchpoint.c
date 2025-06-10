@@ -41,6 +41,7 @@ void init_wp_pool() {
 }
 
 int new_wp(char* args){
+  printf("Add");
   WP *p=NULL,*q=NULL;
   if (free_==NULL)return -1;
   p=free_;
