@@ -152,8 +152,8 @@ config ITRACE_COND
   default "true"
 
 config WATCHPOINT
-  string "Enable watchpoint"
-  default n
+  bool "Enable watchpoint"
+  default "false"
 
 config DIFFTEST
   depends on TARGET_NATIVE_ELF

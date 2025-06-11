@@ -17,7 +17,7 @@
 #include <cpu/cpu.h>
 #include <readline/readline.h>
 #include <readline/history.h>
-#include "sdb.h"
+#include <sdb.h>
 
 #include <stdlib.h>
 #include <memory/paddr.h>
