@@ -46,8 +46,7 @@ int new_wp(char* args){
   WP *p=NULL,*q=NULL;
   if (free_==NULL)return -1;
   p=free_;
-  p->expr = malloc(strlen(args));
-  strcpy(p->expr,args);
+  p->expr = strdup(args);
   Log("%s",p->expr);
   free_=free_->next;
   if (head!=NULL)
