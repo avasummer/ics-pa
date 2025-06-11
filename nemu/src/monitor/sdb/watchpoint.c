@@ -94,8 +94,7 @@ void free_wp(int no)
   }
 }
 
-bool check_expr()
-{
+bool check_expr(){
   if (head==NULL)return 0;
   WP *p;
   bool success=true;
