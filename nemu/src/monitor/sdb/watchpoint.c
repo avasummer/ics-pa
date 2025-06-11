@@ -50,8 +50,6 @@ int new_wp(char* args){
   p->result = expr(args,&success);
   if (!success)return -1;
   p->expr = strdup(args);
-
-
   free_=free_->next;
   if (head!=NULL)
   {
