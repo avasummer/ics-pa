@@ -45,10 +45,10 @@ void init_wp_pool() {
 int new_wp(char* args){
   WP *p=NULL,*q=NULL;
   if (free_==NULL)return -1;
-  bool success=1;
-  p->result = expr(p->expr,&success);
-  if (!success)return -1;
   p=free_;
+  bool success=1;
+  p->result = expr(args,&success);
+  if (!success)return -1;
   p->expr = strdup(args);
 
 
