@@ -195,17 +195,14 @@ word_t eval(int p,int q,bool *success)
       if(tokens[i].type == TK_LEFT_PAREN)inparen--;
       if((tokens[i].type == '+' || tokens[i].type == '-') && inparen==0 && (precedence>1 || (op<i&&precedence==1))){
         op=i;
-        printf("op=%d",op);
         precedence=1;
       }
       if((tokens[i].type == '*' || tokens[i].type == '/') && inparen==0 && (precedence>2 || (op<i&&precedence==2))){
         op=i;
-        printf("op=%d",op);
         precedence=2;
       }
       if((tokens[i].type == TK_EQ || tokens[i].type == TK_NEQ) && inparen==0 && (precedence>3 || (op<i&&precedence==3))){
         op=i;
-        printf("op=%d",op);
         precedence=3;
       }
     }
@@ -213,8 +210,8 @@ word_t eval(int p,int q,bool *success)
     if (op-1>=0) val1 = eval(p, op - 1,success);
     val2 = eval(op + 1, q,success);
     switch (tokens[op].type) {
-    case '+': {printf("return %d+%d\n",val1,val2);return val1 + val2;}
-    case '-': {printf("return %d-%d\n",val1,val2);return val1 - val2;}
+    case '+': {return val1 + val2;}
+    case '-': {return val1 - val2;}
     case '*':
       {
         printf("return %d*%d\n",val1,val2);
