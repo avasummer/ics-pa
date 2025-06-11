@@ -100,6 +100,7 @@ bool check_expr(){
   WP *p;
   bool success=true;
   p=head;
+  Log("%s",p->expr);
   word_t result = expr(p->expr,&success);
   if (result!=p->result && success)
   {
