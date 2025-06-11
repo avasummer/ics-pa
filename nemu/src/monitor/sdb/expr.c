@@ -254,7 +254,6 @@ word_t expr(char *e, bool *success)
       tokens[i].type = DEREF;
        }
   }
-  printf("nr%d\n",nr_token);
   word_t result=eval(0,nr_token-1,success);
   if (*success)return result;
   return 0;
