@@ -45,6 +45,7 @@ int new_wp(char* args){
   if (free_==NULL)return -1;
   p=free_;
   p->expr = args;
+  Log("%s",args);
   free_=free_->next;
   if (head!=NULL)
   {
@@ -100,7 +101,7 @@ bool check_expr(){
   bool success=true;
   p=head;
   word_t result = expr(p->expr,&success);
-  if (result!=p->result)
+  if (result!=p->result && success)
   {
     printf("Watchpoint %d changed.",p->NO);
     return 1;
