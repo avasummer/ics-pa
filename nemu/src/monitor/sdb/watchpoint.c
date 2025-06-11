@@ -14,6 +14,8 @@
 ***************************************************************************************/
 
 #include <sdb.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define NR_WP 32
 
@@ -44,8 +46,9 @@ int new_wp(char* args){
   WP *p=NULL,*q=NULL;
   if (free_==NULL)return -1;
   p=free_;
-  p->expr = args;
-  Log("%s",args);
+  p->expr = malloc(strlen(args));
+  strcpy(p->expr,args);
+  Log("%s",p->expr);
   free_=free_->next;
   if (head!=NULL)
   {
@@ -100,7 +103,7 @@ bool check_expr(){
   WP *p;
   bool success=true;
   p=head;
-  printf("1 %s",p->expr);
+  Log("%s",p->expr);
   word_t result = expr(p->expr,&success);
   if (result!=p->result && success)
   {
