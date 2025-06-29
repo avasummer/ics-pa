@@ -104,7 +104,7 @@ static int cmd_p(char *args)
   if(args == NULL) {return 0;}
   bool success=true;
   word_t result = expr(args,&success);
-  if (success)printf("%d  %x\n",result,result);
+  if (success)printf("%d  0x%x\n",result,result);
   return 0;
 }
 
