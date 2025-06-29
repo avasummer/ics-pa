@@ -119,14 +119,14 @@ bool check_expr(){
 void list_watchpoints()
 {
   if (head==NULL)return;
-  printf("%3s %10s %8s","Index","Expression","Result");
+  printf("%3s %10s %8s\n","Index","Expression","Result");
   WP *p=head;
   do
   {
     bool success=true;word_t result=expr(p->expr,&success);
     printf("%3d %10s",p->NO,p->expr);
-    if (success)printf("%8s%x","0x",result);
-    else printf("%8s","Invalid");
+    if (success)printf("%8s%x\n","0x",result);
+    else printf("%8s\n","Invalid");
   }while (p->next!=NULL);
 
 }
