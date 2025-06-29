@@ -18,6 +18,7 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include <sdb.h>
+#include <config/watchpoint.h>
 
 #include <stdlib.h>
 #include <memory/paddr.h>
@@ -83,6 +84,7 @@ static int cmd_d(char *args) {
 
 static int cmd_info(char *args) {
   isa_reg_display();
+ // list_watchpoints();
   return 0;
 }
 
@@ -119,7 +121,7 @@ static struct {
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
   { "si", "Step", cmd_si },
-  { "info", "Print registers", cmd_info },
+  { "info", "Print registers, watchpoints", cmd_info },
   { "x", "Scan memory", cmd_x },
   { "p","Print value", cmd_p},
   { "w","Add a watchpoint", cmd_w},

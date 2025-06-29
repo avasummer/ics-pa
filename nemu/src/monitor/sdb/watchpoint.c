@@ -14,6 +14,7 @@
 ***************************************************************************************/
 
 #include <sdb.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -100,18 +101,34 @@ void free_wp(int no)
 }
 
 bool check_expr(){
+  bool changed=false;
   if (head==NULL)return 0;
   WP *p;
   bool success=true;
   p=head;
-  Log("%s",p->expr);
   word_t result = expr(p->expr,&success);
   if (result!=p->result && success)
   {
     printf("Watchpoint %d changed.",p->NO);
-    return 1;
+    changed=true;
   }
+  if (changed)return 1;
   return 0;
+}
+
+void list_watchpoints()
+{
+  if (head==NULL)return;
+  printf("%3s %10s %8s","Index","Expression","Result");
+  WP *p=head;
+  do
+  {
+    bool success=true;word_t result=expr(p->expr,&success);
+    printf("%3d %10s",p->NO,p->expr);
+    if (success)printf("%8s%x","0x",result);
+    else printf("%8s","Invalid");
+  }while (p->next!=NULL);
+
 }
 /* TODO: Implement the functionality of watchpoint */
 
