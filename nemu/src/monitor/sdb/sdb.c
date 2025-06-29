@@ -84,7 +84,7 @@ static int cmd_d(char *args) {
 
 static int cmd_info(char *args) {
   isa_reg_display();
- // list_watchpoints();
+  list_watchpoints();
   return 0;
 }
 
