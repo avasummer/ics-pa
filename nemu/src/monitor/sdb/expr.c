@@ -206,7 +206,6 @@ word_t eval(int p,int q,bool *success)
         precedence=3;
       }
     }
-    printf("finally %d\n",op);
     if (op-1>=0) val1 = eval(p, op - 1,success);
     val2 = eval(op + 1, q,success);
     switch (tokens[op].type) {
