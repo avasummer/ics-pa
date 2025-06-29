@@ -103,7 +103,8 @@ static int cmd_p(char *args)
 {
   if(args == NULL) {return 0;}
   bool success=true;
-  if (success)printf("%d\n",expr(args,&success));
+  word_t result = expr(args,&success);
+  if (success)printf("%d  %x\n",result,result);
   return 0;
 }
 
