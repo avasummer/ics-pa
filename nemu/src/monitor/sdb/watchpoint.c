@@ -124,7 +124,7 @@ void list_watchpoints()
   do
   {
     bool success=true;word_t result=expr(p->expr,&success);
-    printf("%3d %10s",p->NO,p->expr);
+    printf("%-3d %-10s",p->NO,p->expr);
     if (success)printf("%8s%x\n","0x",result);
     else printf("%8s\n","Invalid");
     p=p->next;
