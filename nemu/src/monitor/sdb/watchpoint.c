@@ -14,6 +14,7 @@
 ***************************************************************************************/
 
 #include <sdb.h>
+#include <isa.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -114,7 +115,7 @@ bool check_expr(){
   word_t result = expr(p->expr,&success);
   if (result!=p->result && success)
   {
-    printf("Watchpoint %d changed.",p->NO);
+    printf("Watchpoint %d changed at 0x%x.\n",p->NO,cpu.pc);
     changed=true;
   }
   if (changed)return 1;
