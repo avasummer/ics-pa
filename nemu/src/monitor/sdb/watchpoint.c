@@ -128,6 +128,7 @@ void list_watchpoints()
     if (success)printf("%s%x\n","0x",result);
     else printf("%s\n","Invalid");
     p=p->next;
+    if (p==NULL)return;
   }while (p!=NULL&&p->next!=NULL);
 
 }
