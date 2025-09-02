@@ -13,6 +13,7 @@
 * See the Mulan PSL v2 for more details.
 ***************************************************************************************/
 
+#include <inttypes.h>
 #include <sdb.h>
 #include <isa.h>
 #include <stdio.h>
@@ -115,7 +116,7 @@ bool check_expr(){
   word_t result = expr(p->expr,&success);
   if (result!=p->result && success)
   {
-    printf("Watchpoint %d changed at 0x%x.\n",p->NO,cpu.pc);
+    printf("Watchpoint %d changed at 0x%" PRIx64 ".\n",p->NO,cpu.pc);
     changed=true;
   }
   if (changed)return 1;
@@ -131,7 +132,7 @@ void list_watchpoints()
   {
     bool success=true;word_t result=expr(p->expr,&success);
     printf("%-5d %-10s ",p->NO,p->expr);
-    if (success)printf("%s%x\n","0x",result);
+    if (success)printf("%s%" PRIx64 "\n","0x",result);
     else printf("%s\n","Invalid");
     p=p->next;
   }while (p!=NULL&&p->next!=NULL);

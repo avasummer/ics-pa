@@ -13,6 +13,7 @@
 * See the Mulan PSL v2 for more details.
 ***************************************************************************************/
 
+#include <inttypes.h>
 #include <isa.h>
 #include <cpu/cpu.h>
 #include <readline/readline.h>
@@ -92,10 +93,10 @@ static int cmd_x(char *args) {
   char *dargs[2];
   dargs[0]=strtok(args," ");
   dargs[1]=strtok(NULL," ");
-  long addr=strtol(dargs[1], NULL, 16);
+  word_t addr=strtol(dargs[1], NULL, 16);
   long count=strtol(dargs[0], NULL, 10);
   for(int i=0;i<count;i++) {
-  	printf("0lx%x: 0x%x\n",(unsigned)addr,paddr_read(addr,4));
+  	printf("0x%" PRIx64 ": 0x%" PRIx64 "\n",addr,paddr_read(addr,4));
     addr+=4;
   }
   return 0;
@@ -106,7 +107,7 @@ static int cmd_p(char *args)
   if(args == NULL) {return 0;}
   bool success=true;
   word_t result = expr(args,&success);
-  if (success)printf("%d  0x%x\n",result,result);
+  if (success)printf("%" PRId64 "  0x%" PRIx64 "\n",result,result);
   return 0;
 }
 
