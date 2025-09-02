@@ -24,6 +24,7 @@
 #include <stdlib.h>
 #include <memory/paddr.h>
 
+#include "../../../include/common.h"
 
 
 static int is_batch_mode = false;
@@ -96,7 +97,7 @@ static int cmd_x(char *args) {
   word_t addr=strtol(dargs[1], NULL, 16);
   long count=strtol(dargs[0], NULL, 10);
   for(int i=0;i<count;i++) {
-  	printf("0x%" PRIx64 ": 0x%" PRIx64 "\n",addr,paddr_read(addr,4));
+  	printf(FMT_WORD FMT_WORD"\n",addr,paddr_read(addr,4));
     addr+=4;
   }
   return 0;
