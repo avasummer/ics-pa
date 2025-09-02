@@ -92,10 +92,17 @@ static int cmd_info(char *args) {
 
 static int cmd_x(char *args) {
   char *dargs[2];
+  long count = 1;
+  word_t addr = 0;
   dargs[0]=strtok(args," ");
   dargs[1]=strtok(NULL," ");
-  word_t addr=strtol(dargs[1], NULL, 16);
-  long count=strtol(dargs[0], NULL, 10);
+  if (dargs[1]==NULL)
+    addr=strtol(dargs[0], NULL, 16);
+  else
+  {
+    addr=strtol(dargs[1], NULL, 16);
+    count=strtol(dargs[0], NULL, 10);
+  }
   for(int i=0;i<count;i++) {
   	printf(FMT_WORD " " FMT_WORD"\n",addr,paddr_read(addr,4));
     addr+=4;
