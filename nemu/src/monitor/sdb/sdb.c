@@ -115,7 +115,7 @@ static int cmd_p(char *args)
   if(args == NULL) {return 0;}
   bool success=true;
   word_t result = expr(args,&success);
-  if (success)printf(FMT_WORD "  " FMT_WORD "\n",result,result);
+  if (success)printf(FMT_WORDD "  " FMT_WORD "\n",result,result);
   return 0;
 }
 
@@ -180,7 +180,7 @@ void sdb_mainloop() {
     char *cmd = strtok(str, " ");
     if (cmd == NULL)
     {
-      HIST_ENTRY *history_entry = history_get(history_length );
+      HIST_ENTRY *history_entry = history_get(history_length);
       if (history_entry == NULL) { continue; }
       str = history_entry->line;
       cmd = strtok(str, " ");
