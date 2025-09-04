@@ -179,7 +179,11 @@ void sdb_mainloop() {
 
     /* extract the first token as the command */
     char *cmd = strtok(str, " ");
-    if (cmd == NULL) { continue; }
+    if (cmd == NULL)
+    {
+      printf("111");
+      continue;
+    }
 
     /* treat the remaining string as the arguments,
      * which may need further parsing
@@ -193,7 +197,6 @@ void sdb_mainloop() {
     extern void sdl_clear_event_queue();
     sdl_clear_event_queue();
 #endif
-
     int i;
     for (i = 0; i < NR_CMD; i ++) {
       if (strcmp(cmd, cmd_table[i].name) == 0) {
