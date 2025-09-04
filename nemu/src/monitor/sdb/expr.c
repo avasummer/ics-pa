@@ -252,6 +252,7 @@ word_t expr(char *e, bool *success)
     return 0;
   }
   for (int i = 0; i < nr_token; i ++) {
+    eval_log("[%d]%d ",i,tokens[i].type);
     if (tokens[i].type == '*' && (i == 0 ||
       (tokens[i - 1].type != TK_RIGHT_PAREN &&
        tokens[i - 1].type != TK_DEC &&
