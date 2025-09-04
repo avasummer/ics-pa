@@ -176,10 +176,15 @@ void sdb_mainloop() {
 
   for (char *str; (str = rl_gets()) != NULL; ) {
     char *str_end = str + strlen(str);
-    if (str == NULL)printf("123");
     /* extract the first token as the command */
     char *cmd = strtok(str, " ");
-    if (cmd == NULL) { continue; }
+    if (cmd == NULL)
+    {
+      HIST_ENTRY *history_entry = history_get(history_length - 1);
+      str = history_entry->line;
+      cmd = strtok(str, " ");
+      if (cmd == NULL) { continue; }
+    }
 
     /* treat the remaining string as the arguments,
      * which may need further parsing
