@@ -185,12 +185,13 @@ word_t eval(int p,int q,bool *success)
     /* The expression is surrounded by a matched pair of parentheses.
      * If that is the case, just throw away the parentheses.
      */
+    Log("%d %d",p+1,q+1);
     return eval(p + 1, q - 1,success);
   }
   else {
     int inparen=0,precedence=5,op=p;
     word_t val1=0,val2=0;
-    for(int i = q; i >= p; i --) {
+    for(int i = q; i >= p; i --) { //handle paren and find main op
       if(tokens[i].type == TK_RIGHT_PAREN)inparen++;
       if(tokens[i].type == TK_LEFT_PAREN)inparen--;
       if((tokens[i].type == '+' || tokens[i].type == '-') && inparen==0 && (precedence>1 || (op<i&&precedence==1))){
@@ -207,8 +208,8 @@ word_t eval(int p,int q,bool *success)
         precedence=3;
       }
     }
-    if (op-1>=0) val1 = eval(p, op - 1,success);
-    val2 = eval(op + 1, q,success);
+    if (op-1>=0) val1 = eval(p, op - 1, success);
+    val2 = eval(op + 1, q, success);
     switch (tokens[op].type) {
     case '+': {return val1 + val2;}
     case '-': {return val1 - val2;}
