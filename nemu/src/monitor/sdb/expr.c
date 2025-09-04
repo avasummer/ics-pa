@@ -26,15 +26,15 @@
 #define eval_log(...) Log(__VA_ARGS__)
 
 enum {
-  TK_NOTYPE = 256,
-  TK_EQ = 1,
-  TK_NEQ = 2,
-  TK_REGISTER = 6,
-  TK_DEC=10,
-  TK_HEX=16,
-  TK_LEFT_PAREN=3,
-  TK_RIGHT_PAREN=4,
-  DEREF=5
+  TK_NOTYPE,
+  TK_EQ,
+  TK_NEQ,
+  TK_REGISTER,
+  TK_DEC,
+  TK_HEX,
+  TK_LEFT_PAREN,
+  TK_RIGHT_PAREN,
+  DEREF
   /* TODO: Add more token types */
 };
 
