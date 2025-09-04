@@ -181,9 +181,9 @@ void sdb_mainloop() {
     if (cmd == NULL)
     {
       HIST_ENTRY *history_entry = history_get(history_length - 1);
+      if (history_entry == NULL) { continue; }
       str = history_entry->line;
       cmd = strtok(str, " ");
-      if (cmd == NULL) { continue; }
     }
 
     /* treat the remaining string as the arguments,
