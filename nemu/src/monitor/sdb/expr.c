@@ -23,7 +23,8 @@
 #include <string.h>
 #include <memory/paddr.h>
 
-#define eval_log(...) Log(__VA_ARGS__)
+//#define eval_log(...) Log(__VA_ARGS__)
+#define eval_log(...) ((void)0)
 
 enum {
   TK_NOTYPE,
