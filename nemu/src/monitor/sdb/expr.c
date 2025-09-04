@@ -23,6 +23,8 @@
 #include <string.h>
 #include <memory/paddr.h>
 
+#define eval_log(...) Log(__VA_ARGS__)
+
 enum {
   TK_NOTYPE = 256,
   TK_EQ = 1,
@@ -163,7 +165,7 @@ bool check_parentheses(int p,int q) {
 
 word_t eval(int p,int q,bool *success)
 {
-  Log("eval %d %d",p,q);
+  eval_log("eval %d %d",p,q);
   if (*success==false)return 0;
   if (p > q) {
     printf("Bad expression at p:%d, q:%d\n",p,q);
@@ -186,7 +188,7 @@ word_t eval(int p,int q,bool *success)
     /* The expression is surrounded by a matched pair of parentheses.
      * If that is the case, just throw away the parentheses.
      */
-     Log("paren %d %d",p+1,q-1);
+    eval_log("paren %d %d",p+1,q-1);
     return eval(p + 1, q - 1,success);
   }
   else {
