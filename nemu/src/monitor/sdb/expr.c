@@ -201,7 +201,8 @@ word_t eval(int p,int q,bool *success)
         op=i;
         precedence=2;
       }
-      if((tokens[i].type == TK_EQ || tokens[i].type == TK_NEQ) && inparen==0 && (precedence>3 || (op<i&&precedence==3))){
+      if((tokens[i].type == TK_EQ || tokens[i].type == TK_NEQ || tokens[i].type == DEREF) && inparen==0 && (precedence>3 || (op<i&&precedence==3)))
+      {
         op=i;
         precedence=3;
       }
