@@ -29,7 +29,7 @@ enum {
   TK_NOTYPE = 256,
   TK_EQ = 1,
   TK_NEQ = 2,
-  TK_REGISTER,
+  TK_REGISTER = 6,
   TK_DEC=10,
   TK_HEX=16,
   TK_LEFT_PAREN=3,
