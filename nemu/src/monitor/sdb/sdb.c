@@ -180,7 +180,7 @@ void sdb_mainloop() {
     char *cmd = strtok(str, " ");
     if (cmd == NULL)
     {
-      HIST_ENTRY *history_entry = history_get(history_length - 1);
+      HIST_ENTRY *history_entry = history_get(history_length );
       if (history_entry == NULL) { continue; }
       str = history_entry->line;
       cmd = strtok(str, " ");
