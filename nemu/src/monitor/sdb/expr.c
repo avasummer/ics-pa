@@ -162,7 +162,6 @@ bool check_parentheses(int p,int q) {
     }
   }
   eval_log("false paren: %d %d",p,q);
-  printf("%d %d",tokens[p].type,tokens[p].type);
   return false;
 }
 
