@@ -10,7 +10,12 @@ size_t strlen(const char *s) {
 }
 
 char *strcpy(char *dst, const char *src) {
-  panic("Not implemented");
+    int n = sizeof(src);
+    for (int i = 0; i < n; i++)
+    {
+        dst[i] = src[i];
+    }
+    return dst;
 }
 
 char *strncpy(char *dst, const char *src, size_t n) {
