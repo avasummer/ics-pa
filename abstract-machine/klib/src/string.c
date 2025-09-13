@@ -33,10 +33,8 @@ int strcmp(const char* s1, const char* s2) {
         unsigned char c1 = *s1++;
         unsigned char c2 = *s2++;
         diff = c1 - c2;
-        if(c1 == '\0' || diff != 0)
-            return diff;
+        if(c1 == '\0' || diff != 0) return diff;
     }
-    return diff;
 }
 
 int strncmp(const char *s1, const char *s2, size_t n) {
