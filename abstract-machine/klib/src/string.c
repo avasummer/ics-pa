@@ -10,6 +10,7 @@ size_t strlen(const char *s) {
 }
 
 char *strcpy(char *dst, const char *src) {
+    panic("Not implemented");
     int n = sizeof(src);
     for (int i = 0; i < n; i++)
     {
@@ -27,6 +28,7 @@ char *strcat(char *dst, const char *src) {
 }
 
 int strcmp(const char* s1, const char* s2) {
+    panic("Not implemented");
     int n = sizeof(s1);
     int diff = 0;
     for(int i = 0; i < n; ++i)
