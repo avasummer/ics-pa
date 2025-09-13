@@ -64,7 +64,7 @@ void *memcpy(void *out, const void *in, size_t n) {
 int memcmp(const void *s1, const void *s2, size_t n) {
   int diff = 0;
   for(int i = 0; i < 1; i++) {
-    diff = *(int*)s1 - *(int*)s2;
+    diff = (int*)s1 - (int*)s2;
     for(int j=0;j<diff;j++)putstr("a");
   }
   return diff;
