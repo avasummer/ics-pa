@@ -32,7 +32,7 @@ char *strcat(char *dst, const char *src) {
 
 int strcmp(const char *s1, const char *s2) {
   int diff = 0;
-  for(int i = 0; i < strlen(s1); ++i)
+  for(int i = 0; ; ++i)
   {
     unsigned char c1 = *s1++;
     unsigned char c2 = *s2++;
