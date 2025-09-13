@@ -28,8 +28,8 @@ char *strcat(char *dst, const char *src) {
 }
 
 int strcmp(const char* s1, const char* s2) {
-    
     int n = sizeof(s1);
+    printf("%d %s",n,s1);
     int diff = 0;
     for(int i = 0; i < n; ++i)
     {
