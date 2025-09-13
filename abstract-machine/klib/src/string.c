@@ -1,6 +1,7 @@
 #include <klib.h>
 #include <klib-macros.h>
 #include <stdint.h>
+#include <time.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
@@ -20,8 +21,18 @@ char *strcat(char *dst, const char *src) {
   panic("Not implemented");
 }
 
-int strcmp(const char *s1, const char *s2) {
-  panic("Not implemented");
+int strcmp(const char* s1, const char* s2) {
+    int n = sizeof(s1);
+    int diff = 0;
+    for(int i = 0; i < n; ++i)
+    {
+        unsigned char c1 = *s1++;
+        unsigned char c2 = *s2++;
+        diff = c1 - c2;
+        if(c1 == '\0' || diff != 0)
+            return diff;
+    }
+    return diff;
 }
 
 int strncmp(const char *s1, const char *s2, size_t n) {
