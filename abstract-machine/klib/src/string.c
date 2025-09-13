@@ -6,16 +6,19 @@
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 size_t strlen(const char *s) {
-  panic("Not implemented");
+  for(size_t i = 0;; i++)
+  {
+    if(s[i] == '\0')return i;
+  }
 }
 
 char *strcpy(char *dst, const char *src) {
-    int n = sizeof(src);
-    for (int i = 0; i < n; i++)
-    {
-        dst[i] = src[i];
-    }
-    return dst;
+  int n = strlen(src);
+  for(int i = 0; i < n; i++)
+  {
+    dst[i] = src[i];
+  }
+  return dst;
 }
 
 char *strncpy(char *dst, const char *src, size_t n) {
@@ -23,18 +26,20 @@ char *strncpy(char *dst, const char *src, size_t n) {
 }
 
 char *strcat(char *dst, const char *src) {
-  panic("Not implemented");
+  strcpy(dst + strlen(dst), src);
+  return dst;
 }
 
-int strcmp(const char* s1, const char* s2) {
-    int diff = 0;
-    for(int i = 0; ; ++i)
-    {
-        unsigned char c1 = *s1++;
-        unsigned char c2 = *s2++;
-        diff = c1 - c2;
-        if(c1 == '\0' || diff != 0) return diff;
-    }
+int strcmp(const char *s1, const char *s2) {
+  int diff = 0;
+  for(int i = 0; i < strlen(s1); ++i)
+  {
+    unsigned char c1 = *s1++;
+    unsigned char c2 = *s2++;
+    diff = c1 - c2;
+    if(c1 == '\0' || diff != 0) return diff;
+  }
+  return -1;
 }
 
 int strncmp(const char *s1, const char *s2, size_t n) {
