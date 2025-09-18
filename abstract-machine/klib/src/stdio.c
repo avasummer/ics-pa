@@ -23,7 +23,7 @@ int sprintf(char *out, const char *fmt, ...) {
       *optr++ = *p;
       continue;
     }
-    switch(*p++) {
+    switch(*++p) {
     case 's':
       {
         char *s = va_arg(arg, char *);
