@@ -23,10 +23,9 @@ int sprintf(char *out, const char *fmt, ...) {
       *optr++ = *p;
       continue;
     }
-    switch(*++p) {
+    switch(*p) {
     case 's':
       {
-        panic("s");
         char *s = va_arg(arg, char *);
         for(int i = 0; i < strlen(s); i++) {
           *optr++ = *p;
