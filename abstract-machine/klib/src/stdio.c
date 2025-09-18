@@ -28,7 +28,7 @@ int sprintf(char *out, const char *fmt, ...) {
       {
         char *s = va_arg(arg, char *);
         for(int i = 0; i < strlen(s); i++) {
-          *optr++ = *p;
+          *optr++ = s[i];
         }
         break;
       }
