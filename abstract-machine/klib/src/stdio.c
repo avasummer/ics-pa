@@ -44,6 +44,7 @@ int sprintf(char *out, const char *fmt, ...) {
         }
     }
   }
+  optr = 0;
   return 0;
 }
 
