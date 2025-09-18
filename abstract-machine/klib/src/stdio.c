@@ -34,7 +34,6 @@ int sprintf(char *out, const char *fmt, ...) {
       }
     case 'd':
       {
-        panic("1");
         int d = va_arg(arg, int);
         do {
           *optr++ = ('0' + d % 10);
