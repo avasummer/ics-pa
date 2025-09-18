@@ -34,10 +34,22 @@ int sprintf(char *out, const char *fmt, ...) {
       }
     case 'd':
       {
-        int d = va_arg(arg, int);
-        do {
-          *optr++ = ('0' + d % 10);
-        } while(d /= 10 != 0);
+        long d = va_arg(arg, int);
+        int negative = (d < 0);
+        unsigned long u = negative ? -d : d;
+        char buf[sizeof(long)+1];
+        char *p = buf + sizeof(buf) -1;
+        *p = 0;
+        if (u==0) {
+          *--p = '0';
+        } else {
+          do {
+            *--p = u%10 + '0';
+            u /= 10;
+          } while (u);
+        }
+        if(negative) *optr++ = '-';
+        while(*p) *optr++ = *p++;
         break;
       }
     default:
