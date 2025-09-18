@@ -18,30 +18,33 @@ int sprintf(char *out, const char *fmt, ...) {
   va_list arg;
   va_start(arg, fmt);
   char *optr = out;
-  for (char *p = (char*)fmt; *p != '\0'; p++) {
+  for(char *p = (char*)fmt; *p; p++) {
     if(*p != '%') {
-      *optr++=*p;
+      *optr++ = *p;
       continue;
     }
     switch(*++p) {
-      case 's':
-        {
-          char *s = va_arg(arg, char *);
-          for(int i = 0; i < strlen(s); i++) {
-            *optr++=*p;
-          }
+    case 's':
+      {
+        char *s = va_arg(arg, char *);
+        for(int i = 0; i < strlen(s); i++) {
+          *optr++ = *p;
         }
-      case 'd':
-        {
-          int d = va_arg(arg, int);
-          do {
-            *optr++ = ('0' + d % 10);
-          } while(d/=10!=0);
-        }
-      default:
-        {
-          *optr++=*p;
-        }
+        break;
+      }
+    case 'd':
+      {
+        panic("1");
+        int d = va_arg(arg, int);
+        do {
+          *optr++ = ('0' + d % 10);
+        } while(d /= 10 != 0);
+        break;
+      }
+    default:
+      {
+        *optr++ = *p;
+      }
     }
   }
   optr = 0;
