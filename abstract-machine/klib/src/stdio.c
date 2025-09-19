@@ -3,6 +3,7 @@
 #include <klib-macros.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
@@ -27,7 +28,8 @@ int sprintf(char *out, const char *fmt, ...) {
     case 's':
       {
         char *s = va_arg(arg, char *);
-        for(int i = 0; i < strlen(s); i++) {
+        int len = strlen(s);
+        for(int i = 0; i < len; i++) {
           *optr++ = s[i];
         }
         break;
@@ -68,6 +70,14 @@ int snprintf(char *out, size_t n, const char *fmt, ...) {
 
 int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
   panic("Not implemented");
+}
+
+int puts(const char* str) {
+  int len = strlen(str);
+  for(int i = 0; i < len; i++) {
+    putstr(&str[i]);
+  }
+  return strlen(str);
 }
 
 #endif
