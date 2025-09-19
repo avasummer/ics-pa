@@ -73,10 +73,7 @@ int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
 }
 
 int puts(const char* str) {
-  int len = strlen(str);
-  for(int i = 0; i < len; i++) {
-    putstr(&str[i]);
-  }
+    putstr(str);
   return strlen(str);
 }
 
