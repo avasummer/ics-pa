@@ -18,6 +18,8 @@
 #include <cpu/difftest.h>
 #include <locale.h>
 #include <sdb.h>
+#include <stdint.h>
+#include <string.h>
 #include <config/watchpoint.h>
 
 /* The assembly code of instructions executed is only output to the screen
@@ -70,10 +72,10 @@ static void exec_once(Decode *s, vaddr_t pc) {
   space_len = space_len * 3 + 1;
   memset(p, ' ', space_len);
   p += space_len;
- printf("%s\n",s->logbuf);
   void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
   disassemble(p, s->logbuf + sizeof(s->logbuf) - p,
       MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst, ilen);
+  strcpy(s->ringbuf.buf[s->ringbuf.head], s->logbuf);
 #endif
 }
 
