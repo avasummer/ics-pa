@@ -40,7 +40,6 @@ void ringbuf_push(LogRingbuf *r, const char* log) {
   strcpy(r->buf[r->head], log);
   r->head = (r->head+1) % 10;
   if(r->head == r->tail)  r->tail = (r->tail+1) % 10;
-  Log("%s",r->buf[r->head]);
 }
 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
@@ -60,6 +59,7 @@ static void exec_once(Decode *s, vaddr_t pc) {
   s->snpc = pc;
   isa_exec_once(s);
   cpu.pc = s->dnpc;
+  printf(FMT_WORD "\n" ,s->pc);
 #ifdef CONFIG_ITRACE
   char *p = s->logbuf;
   p += snprintf(p, sizeof(s->logbuf), FMT_WORD ":", s->pc);
