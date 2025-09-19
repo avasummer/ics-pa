@@ -20,6 +20,7 @@ int sprintf(char *out, const char *fmt, ...) {
   va_start(arg, fmt);
   char *optr = out;
   for(char *p = (char*)fmt; *p; p++) {
+    putstr(out);
     if(*p != '%') {
       *optr++ = *p;
       continue;
