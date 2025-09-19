@@ -23,7 +23,7 @@ word_t vaddr_ifetch(vaddr_t addr, int len) {
 
 word_t vaddr_read(vaddr_t addr, int len) {
 #ifdef CONFIG_MTRACE
-  printf(" read   0x" FMT_WORD "   %d\n", addr, len);
+  printf(" read   0x%08" PRIx64 "   %d\n", addr, len);
 #endif
   return paddr_read(addr, len);
 }
