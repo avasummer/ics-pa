@@ -29,6 +29,7 @@ char* ftrace_find(size_t addr) {
 
   while(p) {
     if(addr >= p->addr) {
+      Log("%lx",p->addr);
       offset = addr - p->addr;
       if(offset < min) {
         min = offset;
