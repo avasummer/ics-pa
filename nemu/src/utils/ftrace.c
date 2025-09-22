@@ -19,7 +19,7 @@ void init_ftrace(const char* elf) {
   for (int i = 0; i < elf_header.e_shnum; i++) {
   size_t count = fread(&section_header, 1, sizeof(Elf64_Shdr), fp);
     assert(count == sizeof(Elf64_Shdr));
-    if (section_header.sh_type == SHT_SYMTAB) {
+    if (section_header.sh_type == SHN_COMMON) {
       printf("Symbol Table found at offset: 0x%lx, size: %lu\n",
              (long)section_header.sh_offset, (long)section_header.sh_size);
     }
