@@ -24,8 +24,8 @@ char* ftrace_find(size_t addr);
 char* ftrace_find(size_t addr) {
   Log("%lx\n",addr);
   FT* p = func_table_head;
-  size_t offset = 0, min = 0;
-  char* name = NULL;
+  size_t offset = 0, min = (size_t)0xffffffffffff;
+  char* name=NULL;
 
   while(p) {
     if(addr >= p->addr) {
@@ -38,8 +38,14 @@ char* ftrace_find(size_t addr) {
     }
     p = p->next;
   }
-  if(name!=NULL) {sprintf(name, "[%s@0x" FMT_WORD "]", name, addr);printf("[%s@0x" FMT_WORD "]", name, addr);}
-  return name;
+  if(name!=NULL) {
+    char rname[40];
+    strncpy(rname, name, 40);
+    sprintf(rname, "[%15s @ 0x%8lx]", name, addr);
+    printf("[%s@0x%lx]", name, addr);
+    return strdup(rname);
+  }
+  return NULL;
 }
 
 
