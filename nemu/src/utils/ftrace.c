@@ -31,12 +31,12 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header) {
   Elf64_Sym *sym_table = malloc(symtab_shdr->sh_size);
   fseek(fp, symtab_shdr->sh_offset, SEEK_SET);
   ret = fread(sym_table, symtab_shdr->sh_size, 1, fp);
-  assert(ret == symtab_shdr->sh_size);
+  assert(ret == 1);
 
   char *strtab = malloc(strtab_shdr->sh_size);
   fseek(fp, strtab_shdr->sh_offset, SEEK_SET);
   ret = fread(strtab, strtab_shdr->sh_size, 1, fp);
-  assert(ret == strtab_shdr->sh_size);
+  assert(ret == 1);
 
 
   int num_symbols = symtab_shdr->sh_size / sizeof(Elf64_Sym);
