@@ -22,14 +22,12 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header);
 char* ftrace_find(size_t addr);
 
 char* ftrace_find(size_t addr) {
-  Log("%lx\n",addr);
   FT* p = func_table_head;
   size_t offset = 0, min = (size_t)0xffffffffffff;
   char* name=NULL;
 
   while(p) {
     if(addr >= p->addr) {
-      Log("%lx",p->addr);
       offset = addr - p->addr;
       if(offset < min) {
         min = offset;
