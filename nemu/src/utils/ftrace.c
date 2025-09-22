@@ -25,7 +25,7 @@ char* ftrace_find(size_t addr) {
   FT* p = func_table_head;
   size_t offset = 0, min = 0;
   char* name = NULL;
-  while(p) {
+  while(p!=NULL) {
     if(addr >= p->addr) {
       offset = addr - p->addr;
       if(offset < min) {
