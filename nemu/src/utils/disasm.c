@@ -17,8 +17,7 @@
 #include <capstone/capstone.h>
 #include <common.h>
 
-#include <isa.h>
-void ftrace_find(size_t addr);
+char* ftrace_find(size_t addr);
 
 #define FTRACE(x) \
   if(strcmp(x->op_str,"call") || strcmp(x->op_str,"ret")) \

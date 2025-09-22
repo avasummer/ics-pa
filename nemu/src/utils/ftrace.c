@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "../../include/common.h"
+
 typedef struct func_table
 {
   char *name;
@@ -17,10 +19,23 @@ void init_ftrace(const char *elf);
 void ftrace_append(const char *name, size_t addr);
 void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header);
 
-void ftrace_find(size_t addr);
+char* ftrace_find(size_t addr);
 
-void ftrace_find(size_t addr) {
-  return;
+char* ftrace_find(size_t addr) {
+  FT* p = func_table_head;
+  size_t offset = 0, min = 0;
+  char* name = NULL;
+  while(p) {
+    if(addr >= p->addr) {
+      offset = addr - p->addr;
+      if(offset < min) {
+        min = offset;
+        name = p->name;
+      }
+    }
+  }
+  if(name!=NULL) sprintf(name, "[%s@0x" FMT_WORD "]", name, addr);
+  return name;
 }
 
 
