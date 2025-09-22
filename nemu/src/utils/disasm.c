@@ -20,9 +20,9 @@
 char* ftrace_find(size_t addr);
 
 #define FTRACE(x) \
-  if(strcmp(x->mnemonic,"call") || strcmp(x->mnemonic,"ret")) \
+  if(strcmp(x->mnemonic,"call") || strcmp(x->mnemonic,"ret")){ \
   printf("%s\n",insn->mnemonic); \
-  ftrace_find(x->op_str[0]); \
+  ftrace_find(x->op_str[0]); }\
 
 
 static size_t (*cs_disasm_dl)(csh handle, const uint8_t *code,
