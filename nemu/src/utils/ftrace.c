@@ -9,8 +9,8 @@ void init_ftrace(const char* elf) {
     printf("Failed to open file %s\n", elf);
     return;
   }
-  size_t count = fread(&elf_header, 1, sizeof(Elf64_Ehdr), fp);
-  assert(count);
+  size_t ret = fread(&elf_header, 1, sizeof(Elf64_Ehdr), fp);
+  assert(ret == 1);
   long section_header_offset = elf_header.e_shoff;
 
   Elf64_Shdr section_header;
