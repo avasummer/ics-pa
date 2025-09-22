@@ -33,6 +33,7 @@ char* ftrace_find(size_t addr) {
         name = p->name;
       }
     }
+    p = p->next;
   }
   if(name!=NULL) sprintf(name, "[%s@0x" FMT_WORD "]", name, addr);
   return name;
