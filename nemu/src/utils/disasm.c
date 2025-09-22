@@ -72,7 +72,7 @@ void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte) {
   assert(count == 1);
   int ret = snprintf(str, size, "%s", insn->mnemonic);
   if (insn->op_str[0] != '\0') {
-    ret = snprintf(str + ret, size - ret, "\t%s", insn->op_str);
+    ret = snprintf(str + ret, size - ret, "\t%s111", insn->op_str);
   }
   FTRACE(insn);
   cs_free_dl(insn, count);
