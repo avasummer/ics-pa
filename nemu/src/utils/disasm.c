@@ -74,6 +74,6 @@ void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte) {
   if (insn->op_str[0] != '\0') {
     ret = snprintf(str + ret, size - ret, "\t%s", insn->op_str);
   }
-  cs_free_dl(insn, count);
   FTRACE(insn);
+  cs_free_dl(insn, count);
 }
