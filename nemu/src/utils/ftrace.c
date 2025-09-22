@@ -9,7 +9,7 @@ void init_ftrace(const char* elf) {
     return;
   }
   size_t count = fread(&elf_header, 1, sizeof(Elf64_Ehdr), fp);
-  assert(count==1);
+  assert(count==0);
   long section_header_offset = elf_header.e_shoff;
 
   Elf64_Shdr section_header;
