@@ -20,7 +20,7 @@
 char* ftrace_find(size_t addr);
 
 #define FTRACE(x) \
-  if(!strcmp(x->mnemonic,"call") || !strcmp(x->mnemonic,"ret")){ \
+  if(!strcmp(x->mnemonic,"jal") || !strcmp(x->mnemonic,"jalr")){ \
   printf("%s\n",insn->mnemonic); \
   ftrace_find(x->op_str[0]); }\
 
