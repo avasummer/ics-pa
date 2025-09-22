@@ -21,9 +21,8 @@ char* ftrace_find(size_t addr);
 
 #define FTRACE(x) \
   if(!strcmp(x->mnemonic,"jal") || !strcmp(x->mnemonic,"jalr")){ \
-  printf("%s\n",insn->mnemonic); \
-  ftrace_find(x->op_str[0]); }\
-
+  char* offset = ftrace_find(x->op_str[0]); \
+  snprintf(str + ret, size - ret, "\t%s", offset); }\
 
 static size_t (*cs_disasm_dl)(csh handle, const uint8_t *code,
     size_t code_size, uint64_t address, size_t count, cs_insn **insn);
@@ -71,10 +70,10 @@ void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte) {
 	cs_insn *insn;
 	size_t count = cs_disasm_dl(handle, code, nbyte, pc, 0, &insn);
   assert(count == 1);
-  FTRACE(insn);
   int ret = snprintf(str, size, "%s", insn->mnemonic);
   if (insn->op_str[0] != '\0') {
     snprintf(str + ret, size - ret, "\t%s", insn->op_str);
   }
+  FTRACE(insn);
   cs_free_dl(insn, count);
 }

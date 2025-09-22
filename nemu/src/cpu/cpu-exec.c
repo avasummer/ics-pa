@@ -42,8 +42,6 @@ void ringbuf_push(LogRingbuf *r, const char* log) {
   if(r->head == r->tail) r->tail = (r->tail+1) % 10;
 }
 
-void ftrace_find(size_t addr);
-
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 #ifdef CONFIG_ITRACE_COND
   if (ITRACE_COND) { log_write("%s\n", _this->logbuf); }
@@ -84,6 +82,7 @@ static void exec_once(Decode *s, vaddr_t pc) {
   disassemble(p, s->logbuf + sizeof(s->logbuf) - p,
       MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst, ilen);
   ringbuf_push(&s->ringbuf, s->logbuf);
+  printf("%s\n", s->logbuf);
 #endif
 }
 
