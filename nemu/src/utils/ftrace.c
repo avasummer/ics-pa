@@ -6,6 +6,7 @@ void init_ftrace(const char* elf) {
   Elf64_Ehdr elf_header;
   FILE *fp = fopen(elf, "rb");
   if (fp == NULL) {
+    printf("Failed to open file %s\n", elf);
     return;
   }
   size_t count = fread(&elf_header, 1, sizeof(Elf64_Ehdr), fp);
