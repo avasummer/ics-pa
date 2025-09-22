@@ -21,7 +21,7 @@ char* ftrace_find(size_t addr);
 
 #define FTRACE(x) \
   if(!strcmp(x->mnemonic,"jal") || !strcmp(x->mnemonic,"jalr")){ \
-  printf("%d\n",x->op_str[0]); \
+  printf("%s\n",x->op_str); \
   char* offset = ftrace_find(pc + x->op_str[0]); \
   if(offset!=NULL) snprintf(str + ret, size - ret, "\t%s", offset); } \
 
