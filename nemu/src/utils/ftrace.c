@@ -41,7 +41,7 @@ char* ftrace_find(size_t addr) {
   if(name!=NULL) {
     char rname[40];
     strncpy(rname, name, 40);
-    sprintf(rname, "[%15s @ 0x%8lx]", name, addr);
+    sprintf(rname, "[%s @ 0x%8lx]", name, addr);
     printf("[%s@0x%lx]", name, addr);
     return strdup(rname);
   }
