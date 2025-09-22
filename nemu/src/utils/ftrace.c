@@ -14,6 +14,15 @@ typedef struct func_table
 static FT* func_table_head = NULL;
 
 void init_ftrace(const char *elf);
+void ftrace_append(const char *name, size_t addr);
+void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header);
+
+void ftrace_find(size_t addr);
+
+void ftrace_find(size_t addr) {
+  return;
+}
+
 
 void ftrace_append(const char *name, size_t addr) {
   FT* p = malloc(sizeof(FT));

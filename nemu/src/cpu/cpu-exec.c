@@ -39,8 +39,10 @@ void device_update();
 void ringbuf_push(LogRingbuf *r, const char* log) {
   strcpy(r->buf[r->head], log);
   r->head = (r->head+1) % 10;
-  if(r->head == r->tail)  r->tail = (r->tail+1) % 10;
+  if(r->head == r->tail) r->tail = (r->tail+1) % 10;
 }
+
+void ftrace_find(size_t addr);
 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 #ifdef CONFIG_ITRACE_COND
