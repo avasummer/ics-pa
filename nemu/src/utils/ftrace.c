@@ -1,8 +1,31 @@
 #include <common.h>
 #include <elf.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct func_table
+{
+  char *name;
+  size_t addr;
+  struct func_table* next;
+} FT;
+
+static FT* func_table_head = NULL;
 
 void init_ftrace(const char *elf);
+
+void ftrace_append(const char *name, size_t addr) {
+  FT* p = malloc(sizeof(FT));
+  if(func_table_head == NULL) func_table_head = p;
+  else {
+    p->next = func_table_head;
+    func_table_head = p;
+  }
+  p->name = strdup(name);
+  p->addr = addr;
+}
+
 void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header) {
   Elf64_Shdr *sh_table = malloc(elf_header->e_shnum * sizeof(Elf64_Shdr));
   fseek(fp, elf_header->e_shoff, SEEK_SET);
@@ -40,7 +63,7 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header) {
 
 
   int num_symbols = symtab_shdr->sh_size / sizeof(Elf64_Sym);
-  printf("Parsing %d symbols...\n", num_symbols);
+  //printf("Parsing %d symbols...\n", num_symbols);
 
   for (int i = 0; i < num_symbols; i++) {
     const char *symbol_name = &strtab[sym_table[i].st_name];
@@ -49,6 +72,7 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header) {
 
     if (symbol_type == STT_FUNC) {
       printf("Found function: %s at address 0x%lx\n", symbol_name, symbol_addr);
+      ftrace_append(symbol_name, symbol_addr);
     }
   }
 
