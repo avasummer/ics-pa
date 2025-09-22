@@ -22,9 +22,11 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header);
 char* ftrace_find(size_t addr);
 
 char* ftrace_find(size_t addr) {
+  Log("%lx\n",addr);
   FT* p = func_table_head;
   size_t offset = 0, min = 0;
   char* name = NULL;
+
   while(p) {
     if(addr >= p->addr) {
       offset = addr - p->addr;
@@ -36,7 +38,6 @@ char* ftrace_find(size_t addr) {
     p = p->next;
   }
   if(name!=NULL) {sprintf(name, "[%s@0x" FMT_WORD "]", name, addr);printf("[%s@0x" FMT_WORD "]", name, addr);}
-
   return name;
 }
 
