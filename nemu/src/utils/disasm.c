@@ -66,8 +66,9 @@ void init_disasm() {
   ret = cs_option_dl(handle, CS_OPT_SYNTAX, CS_OPT_SYNTAX_ATT);
   assert(ret == CS_ERR_OK);
 #endif
-static cs_err (*cs_option_dl)(csh handle, cs_opt_type type, size_t value);
-    ret = cs_option_dl(handle, CS_OPT_DETAIL, CS_OPT_ON);
+  cs_err (*cs_option_dl)(csh handle, cs_opt_type type, size_t value) = NULL;
+  cs_option_dl = dlsym(dl_handle, "cs_option");
+  ret = cs_option_dl(handle, CS_OPT_DETAIL, CS_OPT_ON);
   assert(ret == CS_ERR_OK);
 }
 
