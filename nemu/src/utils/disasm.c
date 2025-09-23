@@ -25,7 +25,7 @@ char* ftrace_find(size_t addr);
   int64_t addr = x->detail->riscv.operands[0].imm; \
   Log("%lx \n",addr); \
   char* offset = ftrace_find(pc + addr); \
-  if(offset!=NULL) snprintf(str + 10+ret, size - ret, "\t%s", offset); } \
+  if(offset!=NULL) snprintf(str + 5+ret, size - ret, "\t%s", offset); } \
 
 static size_t (*cs_disasm_dl)(csh handle, const uint8_t *code,
     size_t code_size, uint64_t address, size_t count, cs_insn **insn);
