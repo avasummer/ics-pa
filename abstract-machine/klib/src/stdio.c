@@ -8,7 +8,13 @@
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
-  panic("Not implemented");
+  char buffer[1024];
+  va_list arg;
+  va_start(arg, fmt);
+  int result = sprintf((char*)&buffer, fmt, arg);
+  va_end(arg);
+  putstr((const char*)&buffer[0]);
+  return result;
 }
 
 int vsprintf(char *out, const char *fmt, va_list ap) {
