@@ -9,21 +9,16 @@
 
 int printf(const char *fmt, ...) {
   char buffer[1024];
-  va_list arg;
-  va_start(arg, fmt);
-  int result = sprintf((char*)&buffer, fmt, arg);
-  va_end(arg);
+  memset(buffer, 0, sizeof(buffer));
+  va_list ap;
+  va_start(ap, fmt);
+  int result = vsprintf((char*)&buffer, fmt, ap);
+  va_end(ap);
   putstr((const char*)&buffer[0]);
   return result;
 }
 
 int vsprintf(char *out, const char *fmt, va_list ap) {
-  panic("Not implemented");
-}
-
-int sprintf(char *out, const char *fmt, ...) {
-  va_list arg;
-  va_start(arg, fmt);
   char *optr = out;
   for(char *p = (char*)fmt; *p; p++) {
     putstr(out);
@@ -34,7 +29,7 @@ int sprintf(char *out, const char *fmt, ...) {
     switch(*++p) {
     case 's':
       {
-        char *s = va_arg(arg, char *);
+        char *s = va_arg(ap, char *);
         int len = strlen(s);
         for(int i = 0; i < len; i++) {
           *optr++ = s[i];
@@ -43,7 +38,7 @@ int sprintf(char *out, const char *fmt, ...) {
       }
     case 'd':
       {
-        long d = va_arg(arg, int);
+        long d = va_arg(ap, int);
         int negative = (d < 0);
         unsigned long u = negative ? -d : d;
         char buf[sizeof(long)+1];
@@ -69,6 +64,14 @@ int sprintf(char *out, const char *fmt, ...) {
   }
   *optr = 0;
   return 0;
+}
+
+int sprintf(char *out, const char *fmt, ...) {
+  va_list ap;
+  va_start(ap, fmt);
+  int result = vsprintf(out, fmt, ap);
+  va_end(ap);
+  return result;
 }
 
 int snprintf(char *out, size_t n, const char *fmt, ...) {
