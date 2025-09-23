@@ -39,7 +39,7 @@ char* ftrace_find(size_t addr) {
   if(name!=NULL) {
     char rname[40];
     strncpy(rname, name, 40);
-    sprintf(rname, "[%s@0x%8lx]", name, addr);
+    sprintf(rname, "[%s+0x%lx@0x%8lx]", name, offset, addr);
     return strdup(rname);
   }
   return NULL;
