@@ -22,7 +22,7 @@ char* ftrace_find(size_t addr);
 #define FTRACE(x) \
   if(!strcmp(x->mnemonic,"jal") || !strcmp(x->mnemonic,"jalr")){ \
   int64_t addr = strtol(x->op_str, NULL, 16); \
-  Log("%ld \n",addr); \
+  Log("%lx \n",addr); \
   char* offset = ftrace_find(pc + addr); \
   if(offset!=NULL) snprintf(str + ret, size - ret, "\t%s", offset); } \
 
