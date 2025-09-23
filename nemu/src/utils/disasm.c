@@ -30,7 +30,7 @@ char* ftrace_find(size_t addr);
 static size_t (*cs_disasm_dl)(csh handle, const uint8_t *code,
     size_t code_size, uint64_t address, size_t count, cs_insn **insn);
 static void (*cs_free_dl)(cs_insn *insn, size_t count);
-
+static cs_err (*cs_option_dl)(csh handle, cs_opt_type type, size_t value);
 static csh handle;
 
 void init_disasm() {
@@ -67,6 +67,8 @@ void init_disasm() {
   ret = cs_option_dl(handle, CS_OPT_SYNTAX, CS_OPT_SYNTAX_ATT);
   assert(ret == CS_ERR_OK);
 #endif
+    ret = cs_option_dl(handle, CS_OPT_DETAIL, CS_OPT_ON);
+  assert(ret == CS_ERR_OK);
 }
 
 void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte) {
