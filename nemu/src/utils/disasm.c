@@ -23,7 +23,7 @@ char* ftrace_find(size_t addr);
   if(!strcmp(x->mnemonic,"jal") || !strcmp(x->mnemonic,"jalr")){ \
   Log("%s\n",x->op_str); \
   u_int64_t addr = x->detail->riscv.operands[0].imm; \
-  Log("%lx \n",pc+addr); \
+  Log("%lx \n",addr); \
   char* offset = ftrace_find(pc + addr); \
   if(offset!=NULL) snprintf(str + ret, size - ret, "\t%s", offset); } \
 
