@@ -21,8 +21,9 @@ char* ftrace_find(size_t addr);
 
 #define FTRACE(x) \
   if(!strcmp(x->mnemonic,"jal") || !strcmp(x->mnemonic,"jalr")){ \
-  printf("%s\n",x->op_str); \
-  char* offset = ftrace_find(pc + x->op_str[0]); \
+  size_t addr = strtol(x->op_str, NULL, 16); \
+  Log("%lx \n",addr); \
+  char* offset = ftrace_find(pc + addr); \
   if(offset!=NULL) snprintf(str + ret, size - ret, "\t%s", offset); } \
 
 static size_t (*cs_disasm_dl)(csh handle, const uint8_t *code,
