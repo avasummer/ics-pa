@@ -102,7 +102,7 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header) {
     unsigned char symbol_type = ELF64_ST_TYPE(sym_table[i].st_info);
 
     if (symbol_type == STT_FUNC) {
-      printf("Found function: %s at address 0x%lx\n", symbol_name, symbol_addr);
+//      printf("Found function: %s at address 0x%lx\n", symbol_name, symbol_addr);
       ftrace_append(symbol_name, symbol_addr);
     }
   }
