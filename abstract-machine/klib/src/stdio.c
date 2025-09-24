@@ -21,7 +21,6 @@ int printf(const char *fmt, ...) {
 int vsprintf(char *out, const char *fmt, va_list ap) {
   char *optr = out;
   for(char *p = (char*)fmt; *p; p++) {
-    putstr(out);
     if(*p != '%') {
       *optr++ = *p;
       continue;
