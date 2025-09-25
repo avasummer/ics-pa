@@ -89,7 +89,7 @@ static int decode_exec(Decode *s) {
   INSTPAT("0000000 ????? ????? 001 ????? 01110 11", sllw   , R, R(rd) = (int32_t)((uint32_t)src1 << (src2 & 0x1f)));
   INSTPAT("0000000 ????? ????? 001 ????? 01100 11", sll   , R, R(rd) = (int64_t)((uint64_t)src1 << (src2 & 0x3f)));
   INSTPAT("0000000 ????? ????? 101 ????? 01110 11", srlw   , R, R(rd) = (int32_t)((uint32_t)src1 >> (src2 & 0x1f)));
-  INSTPAT("0000001 ????? ????? 110 ????? 01110 11", remw   , R, if(!src2)R(rd) = src1;else if(src1==INT32_MIN && src2==-1)R(rd)=src1;else R(rd) = ((int32_t)src1 % (int32_t)src2));
+  INSTPAT("0000001 ????? ????? 110 ????? 01110 11", remw   , R, printf("%d",INT32_MIN);if(!src2)R(rd) = src1;else if(src1==INT32_MIN && src2==-1)R(rd)=src1;else R(rd) = ((int32_t)src1 % (int32_t)src2));
   INSTPAT("0000001 ????? ????? 111 ????? 01110 11", remuw  , R, if(!src2)R(rd) = src1;else if(src1==INT32_MIN && src2==-1)R(rd)=src1;else R(rd) = (int32_t)((uint32_t)src1 % (uint32_t)src2));
   INSTPAT("0000001 ????? ????? 111 ????? 01100 11", remu   , R, if(!src2)R(rd) = src1;else if(src1==INT32_MIN && src2==-1)R(rd)=src1;else R(rd) = (uint64_t)src1 % (uint64_t)src2);
   INSTPAT("0000001 ????? ????? 101 ????? 01100 11", divu   , R, R(rd) = (uint64_t)src1 / (uint64_t)src2);
