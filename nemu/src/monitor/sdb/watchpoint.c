@@ -119,6 +119,7 @@ bool check_expr(){
     printf("Watchpoint %d changed at 0x%" PRIx64 ".\n",p->NO,cpu.pc);
     changed=true;
   }
+  p->result=result;
   if (changed)return 1;
   return 0;
 }
