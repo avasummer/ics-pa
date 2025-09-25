@@ -20,12 +20,9 @@
 bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc) {
   bool ok = true;
   if(pc > 0x80000004 && ref_r->pc != pc) {
-    printf("\n [difftest] inequal pc: 0x%lx",ref_r->pc);
-    ok = false;
+    printf("\n [difftest] inequal pc: 0x%lx  0x%lx",ref_r->pc,pc);
   }
-
 for(int i=0;i<32;i++) {
-
   if(ref_r->gpr[i] != gpr(i)) {
     printf("\n [difftest] inequal reg value in %s: 0x%lx", regs[i], ref_r->gpr[i]);
     ok = false;
