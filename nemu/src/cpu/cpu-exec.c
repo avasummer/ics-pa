@@ -18,6 +18,7 @@
 #include <cpu/difftest.h>
 #include <locale.h>
 #include <sdb.h>
+#include <signal.h>
 #include <stdint.h>
 #include <string.h>
 #include <config/watchpoint.h>
@@ -33,7 +34,7 @@ CPU_state cpu = {};
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
 static bool g_print_step = false;
-
+volatile sig_atomic_t running = 1;
 typedef struct
 {
   char buf[10][128];
@@ -42,6 +43,10 @@ typedef struct
 } LogRingbuf;
 
 IFDEF(CONFIG_ITRACE, LogRingbuf ringbuf);
+
+void handle_sigint(int sig) {
+  running = 0;
+}
 
 void device_update();
 
@@ -70,6 +75,9 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 }
 
 static void exec_once(Decode *s, vaddr_t pc) {
+  if (signal(SIGINT, handle_sigint) == SIG_ERR) {
+    assert(0);
+  }
   s->pc = pc;
   s->snpc = pc;
   isa_exec_once(s);
