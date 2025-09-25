@@ -52,8 +52,8 @@ void ringbuf_push(LogRingbuf *r, const char* log) {
 }
 
 void ringbuf_puts(LogRingbuf *r) {
-for(int i=0;i<10;i++){
-  printf("%s\n", r->buf[i]);
+  for(int i = r->tail; i!=r->head; i = (i+1)%10) {
+    printf("%s\n", r->buf[i]);
   }
 }
 
