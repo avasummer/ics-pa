@@ -72,21 +72,27 @@ static int cmd_si(char *args) {
 }
 
 static int cmd_w(char *args) {
+#ifdef CONFIG_WATCHPOINT
    if(args == NULL)return 0;
    new_wp(args);
+#endif
    return 0;
 }
 
 static int cmd_d(char *args) {
+#ifdef CONFIG_WATCHPOINT
   if(args == NULL)return 0;
   int no=strtol(args, NULL, 10);
   free_wp(no);
+#endif
   return 0;
 }
 
 static int cmd_info(char *args) {
   isa_reg_display();
+#ifdef CONFIG_WATCHPOINT
   list_watchpoints();
+  #endif
   return 0;
 }
 
