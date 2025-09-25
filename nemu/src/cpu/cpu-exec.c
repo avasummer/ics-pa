@@ -21,7 +21,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <config/watchpoint.h>
-
+bool check_expr();
 /* The assembly code of instructions executed is only output to the screen
  * when the number of instructions executed is less than this value.
  * This is useful when you use the `si' command.

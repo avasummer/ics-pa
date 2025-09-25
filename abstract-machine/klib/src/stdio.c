@@ -26,6 +26,10 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
       continue;
     }
     switch(*++p) {
+    case (p>'0' && p<='9'):
+      {
+        
+      }
     case 's':
       {
         char *s = va_arg(ap, char *);

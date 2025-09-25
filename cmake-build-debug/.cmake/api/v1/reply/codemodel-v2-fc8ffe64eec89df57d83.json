@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.30"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ics2024",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "expr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-expr-Debug-0b158e5731f7949fc589.json",
+					"name" : "expr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gen-expr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gen-expr-Debug-515ca642d165f847d40e.json",
+					"name" : "gen-expr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ics2024::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ics2024-Debug-be1d308397fec351bec7.json",
+					"name" : "ics2024",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nemu-main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nemu-main-Debug-471c3ae21ecbf2757fd5.json",
+					"name" : "nemu-main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sdb::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sdb-Debug-669db6deea6c9276142f.json",
+					"name" : "sdb",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/summer/ics2024/cmake-build-debug",
+		"source" : "/home/summer/ics2024"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
