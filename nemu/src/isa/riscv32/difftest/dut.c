@@ -26,6 +26,10 @@ for(int i=0;i<32;i++) {
     ok = false;
   }
 }
+  if(ref_r->pc != cpu.pc) {
+    printf("\n [difftest] inequal pc: 0x%lx\n",ref_r->pc);
+    ok = false;
+  }
   return ok;
 }
 
