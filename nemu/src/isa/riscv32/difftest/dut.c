@@ -16,13 +16,15 @@
 #include <isa.h>
 #include <cpu/difftest.h>
 #include "../local-include/reg.h"
+vaddr_t prepc=0;
 
 bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc) {
   bool ok = true;
-  if(ref_r->pc != pc+4) {
+  if(prepc && pc != prepc) {
     printf("\n [difftest] inequal pc: 0x%lx  0x%lx",ref_r->pc,pc);
     ok = false;
   }
+  else prepc = ref_r->pc;
 for(int i=0;i<32;i++) {
   if(ref_r->gpr[i] != gpr(i)) {
     printf("\n [difftest] inequal reg value in %s: 0x%lx", regs[i], ref_r->gpr[i]);
