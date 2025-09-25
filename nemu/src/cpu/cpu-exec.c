@@ -47,14 +47,13 @@ void device_update();
 
 void ringbuf_push(LogRingbuf *r, const char* log) {
   strcpy(r->buf[r->head], log);
-  printf("%s", r->buf[r->head]);
   r->head = (r->head+1) % 10;
   if(r->head == r->tail) r->tail = (r->tail+1) % 10;
 }
 
 void ringbuf_puts(LogRingbuf *r) {
-  for(int i = r->tail; i==r->head; i = (i+1)%10) {
-    printf("%s\n", r->buf[i]);
+for(int i=0;i<10;i++){
+  printf("%s\n", r->buf[i]);
   }
 }
 
