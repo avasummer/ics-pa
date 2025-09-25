@@ -34,12 +34,27 @@ uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
 static bool g_print_step = false;
 
+typedef struct
+{
+  char buf[10][128];
+  int head;
+  int tail;
+} LogRingbuf;
+
+IFDEF(CONFIG_ITRACE, LogRingbuf ringbuf);
+
 void device_update();
 
 void ringbuf_push(LogRingbuf *r, const char* log) {
   strcpy(r->buf[r->head], log);
   r->head = (r->head+1) % 10;
   if(r->head == r->tail) r->tail = (r->tail+1) % 10;
+}
+
+void ringbuf_puts(LogRingbuf *r) {
+  for(int i = r->tail; i==r->head; i = (i+1)%10) {
+    printf("%s", r->buf[i]);
+  }
 }
 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
@@ -81,7 +96,7 @@ static void exec_once(Decode *s, vaddr_t pc) {
   void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
   disassemble(p, s->logbuf + sizeof(s->logbuf) - p,
       MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst, ilen);
-  ringbuf_push(&s->ringbuf, s->logbuf);
+  ringbuf_push(&ringbuf, s->logbuf);
 #endif
 }
 
@@ -136,6 +151,7 @@ void cpu_exec(uint64_t n) {
            (nemu_state.halt_ret == 0 ? ANSI_FMT("HIT GOOD TRAP", ANSI_FG_GREEN) :
             ANSI_FMT("HIT BAD TRAP", ANSI_FG_RED))),
           nemu_state.halt_pc);
+      ringbuf_puts(&ringbuf);
       // fall through
     case NEMU_QUIT: statistic();
   }

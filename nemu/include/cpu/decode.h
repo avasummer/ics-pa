@@ -18,12 +18,7 @@
 
 #include <isa.h>
 
-typedef struct
-{
-  char buf[10][128];
-  int head;
-  int tail;
-} LogRingbuf;
+
 
 typedef struct Decode {
   vaddr_t pc;
@@ -31,7 +26,6 @@ typedef struct Decode {
   vaddr_t dnpc; // dynamic next pc
   ISADecodeInfo isa;
   IFDEF(CONFIG_ITRACE, char logbuf[128]);
-  IFDEF(CONFIG_ITRACE, LogRingbuf ringbuf);
 } Decode;
 
 // --- pattern matching mechanism ---
