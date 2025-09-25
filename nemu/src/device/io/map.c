@@ -56,7 +56,7 @@ word_t map_read(paddr_t addr, int len, IOMap *map) {
   assert(len >= 1 && len <= 8);
   check_bound(map, addr);
 #ifdef CONFIG_DTRACE
-  printf("device read '%s' at 0x%x", map->name, addr);
+  printf("device read '%s' at 0x%x\n", map->name, addr);
   #endif
   paddr_t offset = addr - map->low;
   invoke_callback(map->callback, offset, len, false); // prepare data to read
