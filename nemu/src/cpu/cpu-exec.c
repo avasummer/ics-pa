@@ -47,6 +47,7 @@ void device_update();
 
 void ringbuf_push(LogRingbuf *r, const char* log) {
   strcpy(r->buf[r->head], log);
+  printf("%s", r->buf[r->head]);
   r->head = (r->head+1) % 10;
   if(r->head == r->tail) r->tail = (r->tail+1) % 10;
 }
@@ -151,7 +152,7 @@ void cpu_exec(uint64_t n) {
            (nemu_state.halt_ret == 0 ? ANSI_FMT("HIT GOOD TRAP", ANSI_FG_GREEN) :
             ANSI_FMT("HIT BAD TRAP", ANSI_FG_RED))),
           nemu_state.halt_pc);
-    printf("Instruction trace\n");
+      printf("Instruction trace\n");
       ringbuf_puts(&ringbuf);
       // fall through
     case NEMU_QUIT: statistic();
