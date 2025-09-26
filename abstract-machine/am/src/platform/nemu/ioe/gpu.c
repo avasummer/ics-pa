@@ -15,9 +15,9 @@ void get_size(uint32_t* w, uint32_t* h) {
 
 void __am_gpu_init() {
     int i;
-    uint32_t w = 0;  // TODO: get the correct width
-    uint32_t h = 0;  // TODO: get the correct height
-    get_size(&w, &h);
+  uint32_t screen_wh = inl(VGACTL_ADDR);
+    uint32_t w = screen_wh >> 16;  // TODO: get the correct width
+    uint32_t h =  screen_wh & 0xffff;  // TODO: get the correct height
     uint32_t *fb = (uint32_t *)(uintptr_t)FB_ADDR;
     for (i = 0; i < w * h; i ++) fb[i] = i;
     outl(SYNC_ADDR, 1);
