@@ -8,9 +8,8 @@
 
 void get_size(uint32_t* w, uint32_t* h) {
   uint32_t screen_wh = inl(VGACTL_ADDR);
-  uint32_t screen_w = screen_wh >> 16;
-  uint32_t screen_h = screen_wh & 0xffff;
-  if(screen_w && screen_h)return;
+  *w = screen_wh >> 16;
+  *h = screen_wh & 0xffff;
 }
 
 void __am_gpu_init() {
