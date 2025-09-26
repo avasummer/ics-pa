@@ -34,17 +34,17 @@ void __am_gpu_config(AM_GPU_CONFIG_T *cfg) {
 }
 
 void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
-  int x = ctl->x, y = ctl->y, w = ctl->w, h = ctl->h;
-  uint32_t screen_w=0,screen_h=0;
-  get_size(&screen_w, &screen_h);
-  if(screen_h < y+h || screen_w < x+w)return;
-  uint32_t *fb = (uint32_t *)(uintptr_t)FB_ADDR;
-  uint32_t *pixels = ctl->pixels;
-  for (int i = y; i < y+h; i++) {
-    for (int j = x; j < x+w; j++) {
-      fb[screen_w*i+j] = pixels[w*(i-y)+(j-x)];
-    }
-  }
+  // int x = ctl->x, y = ctl->y, w = ctl->w, h = ctl->h;
+  // uint32_t screen_w=0,screen_h=0;
+  // get_size(&screen_w, &screen_h);
+  // if(screen_h < y+h || screen_w < x+w)return;
+  // uint32_t *fb = (uint32_t *)(uintptr_t)FB_ADDR;
+  // uint32_t *pixels = ctl->pixels;
+  // for (int i = y; i < y+h; i++) {
+  //   for (int j = x; j < x+w; j++) {
+  //     fb[screen_w*i+j] = pixels[w*(i-y)+(j-x)];
+  //   }
+  // }
   if (ctl->sync) {
     outl(SYNC_ADDR, 1);
   }
