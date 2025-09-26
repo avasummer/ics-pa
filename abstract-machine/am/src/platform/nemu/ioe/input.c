@@ -7,5 +7,5 @@
 
 void __am_input_keybrd(AM_INPUT_KEYBRD_T *kbd) {
   if(kbd->keycode != AM_KEY_NONE)kbd->keydown = true;
-  kbd->keycode = inw(KBD_ADDR);
+  kbd->keycode = inw(KBD_ADDR) & ~KEYDOWN_MASK;
 }
