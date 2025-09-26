@@ -44,9 +44,9 @@ typedef struct
 
 IFDEF(CONFIG_ITRACE, LogRingbuf ringbuf);
 
-void handle_sigint(int sig) {
-  running = 0;
-}
+// void handle_sigint(int sig) {
+//   running = 0;
+// }
 
 void device_update();
 
@@ -63,10 +63,10 @@ void ringbuf_puts(LogRingbuf *r) {
 }
 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
-  if(!running) {
-    nemu_state.state=NEMU_STOP;
-    running = 1;
-  }
+  // if(!running) {
+  //   nemu_state.state=NEMU_STOP;
+  //   running = 1;
+  // }
 
 #ifdef CONFIG_ITRACE_COND
   if (ITRACE_COND) { log_write("%s\n", _this->logbuf); }
@@ -80,9 +80,9 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 }
 
 static void exec_once(Decode *s, vaddr_t pc) {
-  if (signal(SIGINT, handle_sigint) == SIG_ERR) {
-    assert(0);
-  }
+  // if (signal(SIGINT, handle_sigint) == SIG_ERR) {
+  //   assert(0);
+  // }
   s->pc = pc;
   s->snpc = pc;
   isa_exec_once(s);
