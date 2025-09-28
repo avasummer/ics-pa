@@ -100,6 +100,7 @@ LDFLAGS  += -z noexecstack $(addprefix -T, $(LDSCRIPTS))
 
 ### Rule (compile): a single `.c` -> `.o` (gcc)
 $(DST_DIR)/%.o: %.c
+	@echo creating [$(NAME)]
 	@mkdir -p $(dir $@) && echo + CC $<
 	@$(CC) -std=gnu11 $(CFLAGS) -c -o $@ $(realpath $<)
 
