@@ -2,12 +2,14 @@
 #include <klib.h>
 #include <klib-macros.h>
 #include <stdarg.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <string.h>
 
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
+  //not a safe buffer write.
   char buffer[2024];
   memset(buffer, 0, sizeof(buffer));
   va_list ap;
@@ -19,10 +21,28 @@ int printf(const char *fmt, ...) {
 }
 
 int vsprintf(char *out, const char *fmt, va_list ap) {
+   return 0;
+}
+
+int sprintf(char *out, const char *fmt, ...) {
+  va_list ap;
+  va_start(ap, fmt);
+  int result = vsprintf(out, fmt, ap);
+  va_end(ap);
+  return result;
+}
+
+int snprintf(char *out, size_t n, const char *fmt, ...) {
+  panic("Not implemented");
+}
+
+int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
   char *optr = out;
-  for(char *p = (char*)fmt; *p; p++) {
+  char *p = NULL;
+  for(p = (char*)fmt; *p; p++) {
     if(*p != '%') {
       *optr++ = *p;
+      if(strlen(out) >= n - 16)return p-fmt;
       continue;
     }
    switch(*++p) {
@@ -30,7 +50,8 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
       {
         char *s = va_arg(ap, char *);
         int len = strlen(s);
-        for(int i = 0; i < len; i++) {
+        int space = n - strlen(out);
+        for(int i = 0; i < len && i < space; i++) {
           *optr++ = s[i];
         }
         break;
@@ -66,23 +87,7 @@ int vsprintf(char *out, const char *fmt, va_list ap) {
     }
   }
   *optr = 0;
-  return 0;
-}
-
-int sprintf(char *out, const char *fmt, ...) {
-  va_list ap;
-  va_start(ap, fmt);
-  int result = vsprintf(out, fmt, ap);
-  va_end(ap);
-  return result;
-}
-
-int snprintf(char *out, size_t n, const char *fmt, ...) {
-  panic("Not implemented");
-}
-
-int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
-  panic("Not implemented");
+  return *p;
 }
 
 int puts(const char* str) {
