@@ -19,6 +19,13 @@ word_t isa_raise_intr(word_t NO, vaddr_t epc) {
   cpu.mepc = epc;
   cpu.mcause = NO;
   cpu.mstatus.val = 0xa00001800;
+
+#ifdef CONFIG_ETRACE
+  printf("Interrupted: " FMT_WORD "\n", epc);
+  printf("mcause:" FMT_WORD "\n", NO);
+  printf("mtvec:" FMT_WORD "\n", cpu.mtvec);
+#endif
+
   return cpu.mtvec;
 }
 
