@@ -8,7 +8,7 @@
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
-  char buffer[1024];
+  char buffer[2024];
   memset(buffer, 0, sizeof(buffer));
   va_list ap;
   va_start(ap, fmt);
