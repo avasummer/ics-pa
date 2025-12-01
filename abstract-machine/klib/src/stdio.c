@@ -6,15 +6,19 @@
 #include <stdio.h>
 #include <string.h>
 
+#define CHUNK_SIZE 2048
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
   //not a safe buffer write.
-  char buffer[2024];
+  char buffer[CHUNK_SIZE];
   memset(buffer, 0, sizeof(buffer));
+
   va_list ap;
   va_start(ap, fmt);
-  int result = vsprintf((char*)&buffer, fmt, ap);
+
+  int result = vsnprintf((char *)&buffer, CHUNK_SIZE, fmt, ap);
+  if(result!=strlen(fmt))panic("overflow");
   va_end(ap);
   putstr((const char*)&buffer[0]);
   return result;
@@ -37,14 +41,19 @@ int snprintf(char *out, size_t n, const char *fmt, ...) {
 }
 
 int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
+  if(n==0) return 0;
+
   char *optr = out;
   char *p = NULL;
-  for(p = (char*)fmt; *p; p++) {
+
+  for (p = (char *)fmt; *p; p++) {
+    
     if(*p != '%') {
       *optr++ = *p;
-      if(strlen(out) >= n - 16)return p-fmt;
+      if(strlen(out) >= n - 1)return p-fmt;
       continue;
     }
+
    switch(*++p) {
     case 's':
       {
@@ -55,17 +64,17 @@ int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
           *optr++ = s[i];
         }
         break;
-      }
+    }
     case 'l':
       {
         break;
-      }
+    }
     case 'd':
       {
         long d = va_arg(ap, int);
         int negative = (d < 0);
         unsigned long u = negative ? -d : d;
-        char buf[sizeof(long)+1];
+        char buf[sizeof(long)+2];
         char *p = buf + sizeof(buf) -1;
         *p = 0;
         if (u==0) {
@@ -76,12 +85,16 @@ int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
             u /= 10;
           } while (u);
         }
-        if(negative) *optr++ = '-';
-        while(*p) *optr++ = *p++;
+
+        if (negative)
+          *optr++ = '-';
+
+        while (*p) {
+          if(strlen(out) < n - 1)*optr++ = *p++;}
         break;
-      }
-    default:
-      {
+    }
+    case '\0': break;
+    default: {
         *optr++ = *p;
       }
     }
