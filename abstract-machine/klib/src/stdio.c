@@ -87,7 +87,7 @@ int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
     }
   }
   *optr = 0;
-  return *p;
+  return p-fmt;
 }
 
 int puts(const char* str) {
