@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define CHUNK_SIZE 104
+#define CHUNK_SIZE 2048
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 int printf(const char *fmt, ...) {
