@@ -22,7 +22,7 @@ word_t isa_raise_intr(word_t NO, vaddr_t epc) {
   cpu.priv = 3;
   cpu.mstatus.part.MPIE = cpu.mstatus.part.MIE;
   cpu.mstatus.part.MIE = 0;
-  return 0;
+  return cpu.mtvec;
 }
 
 word_t isa_query_intr() { return INTR_EMPTY; }
