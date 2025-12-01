@@ -15,6 +15,7 @@ int printf(const char *fmt, ...) {
   int result = vsprintf((char*)&buffer, fmt, ap);
   va_end(ap);
   putstr((const char*)&buffer[0]);
+  panic("1");
   return result;
 }
 
