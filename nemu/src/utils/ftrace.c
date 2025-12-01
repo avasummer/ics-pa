@@ -98,7 +98,6 @@ void parse_symbols(FILE *fp, Elf64_Ehdr *elf_header) {
 
   for (int i = 0; i < num_symbols; i++) {
     const char *symbol_name = &strtab[sym_table[i].st_name];
-    Log("%d\n",sym_table[i].st_name);
     Elf64_Addr symbol_addr = sym_table[i].st_value;
     unsigned char symbol_type = ELF64_ST_TYPE(sym_table[i].st_info);
 
