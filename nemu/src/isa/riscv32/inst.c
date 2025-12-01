@@ -15,6 +15,7 @@
 
 #include <stdint.h>
 
+#include "common.h"
 #include "local-include/reg.h"
 #include <cpu/cpu.h>
 #include <cpu/ifetch.h>
@@ -23,11 +24,27 @@
 #define R(i) gpr(i)
 #define Mr vaddr_read
 #define Mw vaddr_write
+#define CSR(i) *csr_register(i)
 
 enum {
   TYPE_I, TYPE_U, TYPE_S, TYPE_J, TYPE_R, TYPE_B,
   TYPE_N,  // none
 };
+
+static vaddr_t *csr_register(word_t imm) {
+  switch (imm) {
+  case 0x341:
+    return &(cpu.mepc);
+  case 0x342:
+    return &(cpu.mcause);
+  case 0x300:
+    return &(cpu.mstatus.val);
+  case 0x305:
+    return &(cpu.mtvec);
+  default:
+    panic("Unknown csr");
+  }
+}
 
 #define src1R() do { *src1 = R(rs1); } while (0)
 #define src2R() do { *src2 = R(rs2); } while (0)
@@ -121,6 +138,9 @@ __VA_ARGS__ ; \
   INSTPAT("0000000 ????? ????? 111 ????? 01100 11", and    , R, R(rd) = src1 & src2);
   INSTPAT("0000000 ????? ????? 100 ????? 01100 11", xor    , R, R(rd) = src1 ^ src2);
   INSTPAT("0000000 ????? ????? 110 ????? 01100 11", or     , R, R(rd) = src1 | src2);
+  INSTPAT("??????? ????? ????? 001 ????? 11100 11", csrrw , I, R(rd) = CSR(imm); CSR(imm) = src1);
+  INSTPAT("??????? ????? ????? 010 ????? 11100 11", csrrs , I, R(rd) = CSR(imm); CSR(imm) |= src1);
+  
   INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv    , N, INV(s->pc));
   INSTPAT_END();
 
