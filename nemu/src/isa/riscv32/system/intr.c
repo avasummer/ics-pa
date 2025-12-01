@@ -18,10 +18,7 @@
 word_t isa_raise_intr(word_t NO, vaddr_t epc) {
   cpu.mepc = epc;
   cpu.mcause = NO;
-  cpu.mstatus.part.MPP = cpu.priv;
-  cpu.priv = 3;
-  cpu.mstatus.part.MPIE = cpu.mstatus.part.MIE;
-  cpu.mstatus.part.MIE = 0;
+  cpu.mstatus.val = 0xa00001800;
   return cpu.mtvec;
 }
 
