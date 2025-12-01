@@ -5,9 +5,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -17,12 +17,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/nemu-main.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/nemu-main.o",
       "src/nemu-main.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/nemu-main.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/nemu-main.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/nemu-main.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/nemu-main.o"
   },
   {
     "arguments": [
@@ -30,9 +30,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -42,12 +42,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/device.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/device.o",
       "src/device/device.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/device.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/device.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/device.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/device.o"
   },
   {
     "arguments": [
@@ -55,9 +55,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -67,12 +67,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/alarm.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/alarm.o",
       "src/device/alarm.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/alarm.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/alarm.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/alarm.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/alarm.o"
   },
   {
     "arguments": [
@@ -80,9 +80,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -92,12 +92,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/intr.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/intr.o",
       "src/device/intr.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/intr.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/intr.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/intr.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/intr.o"
   },
   {
     "arguments": [
@@ -105,9 +105,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -117,12 +117,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/serial.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/serial.o",
       "src/device/serial.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/serial.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/serial.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/serial.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/serial.o"
   },
   {
     "arguments": [
@@ -130,9 +130,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -142,12 +142,162 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/intr.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/timer.o",
+      "src/device/timer.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/timer.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/timer.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/keyboard.o",
+      "src/device/keyboard.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/keyboard.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/keyboard.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/vga.o",
+      "src/device/vga.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/vga.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/vga.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/audio.o",
+      "src/device/audio.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/audio.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/audio.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/disk.o",
+      "src/device/disk.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/disk.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/disk.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/sdcard.o",
+      "src/device/sdcard.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/sdcard.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/sdcard.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/intr.o",
       "src/isa/riscv64/system/intr.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/system/intr.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/intr.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/system/intr.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/intr.o"
   },
   {
     "arguments": [
@@ -155,9 +305,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -167,12 +317,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/mmu.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/mmu.o",
       "src/isa/riscv64/system/mmu.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/system/mmu.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/mmu.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/system/mmu.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/system/mmu.o"
   },
   {
     "arguments": [
@@ -180,9 +330,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -192,12 +342,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/init.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/init.o",
       "src/isa/riscv64/init.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/init.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/init.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/init.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/init.o"
   },
   {
     "arguments": [
@@ -205,9 +355,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -217,12 +367,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/logo.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/logo.o",
       "src/isa/riscv64/logo.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/logo.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/logo.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/logo.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/logo.o"
   },
   {
     "arguments": [
@@ -230,9 +380,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -242,12 +392,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/reg.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/reg.o",
       "src/isa/riscv64/reg.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/reg.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/reg.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/reg.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/reg.o"
   },
   {
     "arguments": [
@@ -255,9 +405,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -267,12 +417,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/inst.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/inst.o",
       "src/isa/riscv64/inst.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/inst.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/inst.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/inst.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/inst.o"
   },
   {
     "arguments": [
@@ -280,9 +430,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -292,12 +442,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/difftest/dut.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/difftest/dut.o",
       "src/isa/riscv64/difftest/dut.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/isa/riscv64/difftest/dut.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/difftest/dut.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/isa/riscv64/difftest/dut.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/isa/riscv64/difftest/dut.o"
   },
   {
     "arguments": [
@@ -305,9 +455,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -317,12 +467,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/cpu-exec.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/cpu-exec.o",
       "src/cpu/cpu-exec.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/cpu/cpu-exec.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/cpu-exec.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/cpu/cpu-exec.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/cpu-exec.o"
   },
   {
     "arguments": [
@@ -330,9 +480,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -342,12 +492,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/dut.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/dut.o",
       "src/cpu/difftest/dut.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/cpu/difftest/dut.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/dut.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/cpu/difftest/dut.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/dut.o"
   },
   {
     "arguments": [
@@ -355,9 +505,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -367,12 +517,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/ref.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/ref.o",
       "src/cpu/difftest/ref.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/cpu/difftest/ref.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/ref.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/cpu/difftest/ref.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/cpu/difftest/ref.o"
   },
   {
     "arguments": [
@@ -380,9 +530,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -392,12 +542,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/monitor.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/monitor.o",
       "src/monitor/monitor.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/monitor/monitor.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/monitor.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/monitor/monitor.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/monitor.o"
   },
   {
     "arguments": [
@@ -405,9 +555,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -417,12 +567,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/expr.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/expr.o",
       "src/monitor/sdb/expr.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/monitor/sdb/expr.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/expr.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/monitor/sdb/expr.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/expr.o"
   },
   {
     "arguments": [
@@ -430,9 +580,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -442,12 +592,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/sdb.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/sdb.o",
       "src/monitor/sdb/sdb.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/monitor/sdb/sdb.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/sdb.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/monitor/sdb/sdb.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/sdb.o"
   },
   {
     "arguments": [
@@ -455,9 +605,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -467,12 +617,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/watchpoint.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/watchpoint.o",
       "src/monitor/sdb/watchpoint.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/monitor/sdb/watchpoint.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/watchpoint.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/monitor/sdb/watchpoint.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/monitor/sdb/watchpoint.o"
   },
   {
     "arguments": [
@@ -480,9 +630,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -492,12 +642,37 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/state.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/ftrace.o",
+      "src/utils/ftrace.c"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/utils/ftrace.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/ftrace.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O2",
+      "-Wall",
+      "-Werror",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
+      "-I",
+      "tools/capstone/repo/include",
+      "-O2",
+      "-Og",
+      "-ggdb3",
+      "-DITRACE_COND=true",
+      "-D__GUEST_ISA__=riscv64",
+      "-c",
+      "-o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/state.o",
       "src/utils/state.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/utils/state.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/state.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/utils/state.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/state.o"
   },
   {
     "arguments": [
@@ -505,9 +680,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -517,12 +692,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/timer.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/timer.o",
       "src/utils/timer.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/utils/timer.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/timer.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/utils/timer.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/timer.o"
   },
   {
     "arguments": [
@@ -530,9 +705,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -542,12 +717,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/log.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/log.o",
       "src/utils/log.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/utils/log.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/log.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/utils/log.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/log.o"
   },
   {
     "arguments": [
@@ -555,9 +730,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -567,12 +742,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/disasm.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/disasm.o",
       "src/utils/disasm.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/utils/disasm.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/disasm.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/utils/disasm.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/utils/disasm.o"
   },
   {
     "arguments": [
@@ -580,9 +755,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -592,12 +767,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/paddr.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/paddr.o",
       "src/memory/paddr.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/memory/paddr.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/paddr.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/memory/paddr.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/paddr.o"
   },
   {
     "arguments": [
@@ -605,9 +780,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -617,12 +792,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/vaddr.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/vaddr.o",
       "src/memory/vaddr.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/memory/vaddr.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/vaddr.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/memory/vaddr.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/memory/vaddr.o"
   },
   {
     "arguments": [
@@ -630,9 +805,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -642,12 +817,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/hostcall.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/hostcall.o",
       "src/engine/interpreter/hostcall.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/engine/interpreter/hostcall.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/hostcall.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/engine/interpreter/hostcall.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/hostcall.o"
   },
   {
     "arguments": [
@@ -655,9 +830,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -667,12 +842,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/init.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/init.o",
       "src/engine/interpreter/init.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/engine/interpreter/init.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/init.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/engine/interpreter/init.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/engine/interpreter/init.o"
   },
   {
     "arguments": [
@@ -680,9 +855,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -692,12 +867,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/mmio.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/mmio.o",
       "src/device/io/mmio.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/io/mmio.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/mmio.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/io/mmio.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/mmio.o"
   },
   {
     "arguments": [
@@ -705,9 +880,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -717,12 +892,12 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/port-io.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/port-io.o",
       "src/device/io/port-io.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/io/port-io.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/port-io.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/io/port-io.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/port-io.o"
   },
   {
     "arguments": [
@@ -730,9 +905,9 @@
       "-O2",
       "-Wall",
       "-Werror",
-      "-I/home/summer/ics2024/nemu/include",
-      "-I/home/summer/ics2024/nemu/src/isa/riscv64/include",
-      "-I/home/summer/ics2024/nemu/src/engine/interpreter",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "-I/home/ubuntu/ics2024/nemu/src/isa/riscv64/include",
+      "-I/home/ubuntu/ics2024/nemu/src/engine/interpreter",
       "-I",
       "tools/capstone/repo/include",
       "-O2",
@@ -742,11 +917,44 @@
       "-D__GUEST_ISA__=riscv64",
       "-c",
       "-o",
-      "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/map.o",
+      "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/map.o",
       "src/device/io/map.c"
     ],
-    "directory": "/home/summer/ics2024/nemu",
-    "file": "/home/summer/ics2024/nemu/src/device/io/map.c",
-    "output": "/home/summer/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/map.o"
+    "directory": "/home/ubuntu/ics2024/nemu",
+    "file": "/home/ubuntu/ics2024/nemu/src/device/io/map.c",
+    "output": "/home/ubuntu/ics2024/nemu/build/obj-riscv64-nemu-interpreter/src/device/io/map.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-fvisibility=hidden",
+      "-Irepo",
+      "-Irepo/fesvr",
+      "-Irepo/riscv",
+      "-Irepo/disasm",
+      "-Irepo/customext",
+      "-Irepo/fdt",
+      "-Irepo/softfloat",
+      "-Irepo/spike_main",
+      "-Irepo/spike_dasm",
+      "-Irepo/build",
+      "-I/home/ubuntu/ics2024/nemu/include",
+      "repo/build/libspike_main.a",
+      "repo/build/libriscv.a",
+      "repo/build/libdisasm.a",
+      "repo/build/libsoftfloat.a",
+      "repo/build/libfesvr.a",
+      "repo/build/libfdt.a",
+      "-o",
+      "build/riscv64-spike-so",
+      "difftest.cc"
+    ],
+    "directory": "/home/ubuntu/ics2024/nemu/tools/spike-diff",
+    "file": "/home/ubuntu/ics2024/nemu/tools/spike-diff/difftest.cc",
+    "output": "/home/ubuntu/ics2024/nemu/tools/spike-diff/build/riscv64-spike-so"
   }
 ]
