@@ -20,7 +20,7 @@ int printf(const char *fmt, ...) {
   int result = vsnprintf((char *)&buffer, CHUNK_SIZE, fmt, ap);
   if(result!=strlen(fmt))panic("overflow");
   va_end(ap);
-  putstr((const char*)&buffer[0]);
+  //putstr((const char*)&buffer[0]);
   return result;
 }
 
