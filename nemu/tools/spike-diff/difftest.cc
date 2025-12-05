@@ -20,6 +20,11 @@
 
 #define NR_GPR MUXDEF(CONFIG_RVE, 16, 32)
 
+public:
+  void take_trap_public(trap_t t, reg_t epc) {
+    take_trap(t, epc); 
+  }
+
 static std::vector<std::pair<reg_t, abstract_device_t*>> difftest_plugin_devices;
 static std::vector<std::string> difftest_htif_args;
 static std::vector<std::pair<reg_t, mem_t*>> difftest_mem(
@@ -39,10 +44,6 @@ static debug_module_config_t difftest_dm_config = {
 struct diff_context_t {
   word_t gpr[MUXDEF(CONFIG_RVE, 16, 32)];
   word_t pc;
-  word_t mepc;
-  word_t mcause;
-  word_t mtvec;
-  word_t mstatus;
 };
 
 static sim_t* s = NULL;
@@ -72,10 +73,6 @@ void sim_t::diff_set_regs(void* diff_context) {
     state->XPR.write(i, (sword_t)ctx->gpr[i]);
   }
   state->pc = ctx->pc;
-  state->mepc = ctx->mepc;
-  state->mcause = ctx->mcause;
-  state->mtvec = ctx->mtvec;
-  state->mstatus = ctx->mstatus;
 }
 
 void sim_t::diff_memcpy(reg_t dest, void* src, size_t n) {
