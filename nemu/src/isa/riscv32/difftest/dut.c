@@ -38,7 +38,7 @@ bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc) {
     printf("\n [difftest] inequal pc: 0x%lx\n",ref_r->pc);
     ok = false;
   }
-
+  cpu.mstatus = ref_r->mstatus;
   CHECKDIFF(mcause);
   CHECKDIFF(mepc);
   CHECKDIFF(mtvec);
