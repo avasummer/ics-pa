@@ -17,7 +17,7 @@
 #include "local-include/reg.h"
 #include <common.h>
 
-#define PRINT_REG(p) printf("%-6s 0x%-12lx %-16ld\n", #p, cpu.p , cpu.p)
+#define PRINT_REG(p) printf("%-8s 0x%-12lx %-16ld\n", #p, cpu.p , cpu.p)
 
 const char *regs[32] = {
   "$0", "ra", "sp", "gp", "tp", "t0", "t1", "t2",
