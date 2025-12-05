@@ -7,7 +7,7 @@ void do_syscall(Context *c) {
 
   switch (a[0]) {
   case SYS_yield: {
-    Log("YIELD");
+    Log("calling YIELD");
     yield();
     c->GPRx = 0;
     return;
