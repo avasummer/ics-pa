@@ -65,6 +65,27 @@ int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
         }
         break;
     }
+    case 'p': {
+      uintptr_t ptr = (uintptr_t)va_arg(ap, void*);
+      char buf[2 * sizeof(uintptr_t) + 1];
+      char *t = buf + sizeof(buf) - 1;
+      *t = '\0';
+
+      if (ptr == 0) {
+        *--t = '0';
+      } else {
+        while (ptr) {
+          int v = ptr & 0xf;
+          *--t = (v < 10) ? ('0' + v) : ('a' + (v - 10));
+          ptr >>= 4;
+        }
+      }
+      while (*t) {
+        if (strlen(out) < n - 1) *optr++ = *t++;
+        else break;
+      }
+      break;
+    }
     case 'l':
       {
         break;
