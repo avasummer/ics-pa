@@ -25,16 +25,7 @@ typedef struct {
   word_t mcause;
   word_t priv;
   word_t mtvec;
-  union {
-    struct {
-      uint32_t UIE : 1, SIE : 1, WPRI_0 : 1, MIE : 1;
-      uint32_t UPIE : 1, SPIE : 1, WPRI : 1, MPIE : 1;
-      uint32_t SPP : 1, WPRI_1_2 : 2, MPP : 2, FS : 2;
-      uint32_t XS : 2, MPRV : 1, SUM : 1, MXR : 1;
-      uint32_t TVM : 1, TW : 1, TSR : 1, WPRI_3_10 : 8, SD : 1;
-    } part;
-    word_t val;
-  } mstatus;
+  word_t mstatus;
 } MUXDEF(CONFIG_RV64, riscv64_CPU_state, riscv32_CPU_state);
 
 // decode

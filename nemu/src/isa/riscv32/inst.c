@@ -39,7 +39,7 @@ static vaddr_t *csr_register(word_t imm) {
   case 0x342:
     return &(cpu.mcause);
   case 0x300:
-    return &(cpu.mstatus.val);
+    return &(cpu.mstatus);
   case 0x305:
     return &(cpu.mtvec);
   default:
