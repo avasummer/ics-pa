@@ -60,7 +60,13 @@ void *memmove(void *dst, const void *src, size_t n) {
 }
 
 void *memcpy(void *out, const void *in, size_t n) {
-  panic("Not implemented");
+  unsigned char *dst = (unsigned char *)out;
+  const unsigned char *src = (const unsigned char *)in;
+
+  while (n--) {
+    *dst++ = *src++;
+  }
+  return out;
 }
 
 int memcmp(const void *s1, const void *s2, size_t n) {
