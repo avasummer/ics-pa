@@ -20,7 +20,7 @@ vaddr_t prepc=0;
 
 #define CHECKDIFF(p)                                                           \
   if (ref_r->p != cpu.p) {                                                     \
-    printf("[difftest] Inequal " #p " expecting 0x%lx", ref_r->p);               \
+    printf("[difftest] Inequal " #p " expecting 0x%lx\n", ref_r->p);               \
     ok = false;                                                                \
   }                                                                            
 
