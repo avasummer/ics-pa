@@ -31,6 +31,9 @@ void isa_reg_display() {
   	printf("%-8s 0x%-12lx %-16ld\n",regs[i],gpr(i),gpr(i));
   }
   PRINT_REG(mstatus);
+  PRINT_REG(mepc);
+  PRINT_REG(mcause);
+  PRINT_REG(mtvec);
 }
 
 word_t isa_reg_str2val(const char *s, bool *success) {
