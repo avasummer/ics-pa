@@ -12,6 +12,7 @@ void do_syscall(Context *c) {
     return;
   }
   case SYS_exit: {
+    Log("HALT");
     halt(c->GPR1);
     return;
   }
