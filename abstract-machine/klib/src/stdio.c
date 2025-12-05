@@ -67,6 +67,8 @@ int vsnprintf(char *out, size_t n, const char *fmt, va_list ap) {
     }
     case 'p': {
       uintptr_t ptr = (uintptr_t)va_arg(ap, void*);
+      if (strlen(out) < n - 1) *optr++ = '0';
+      if (strlen(out) < n - 1) *optr++ = 'x';
       char buf[2 * sizeof(uintptr_t) + 1];
       char *t = buf + sizeof(buf) - 1;
       *t = '\0';
