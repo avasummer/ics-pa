@@ -26,6 +26,7 @@ void do_syscall(Context *c) {
   case SYS_write: {
     LOG_CALL("SYS_write: fd=%d", a[1]);
     if (a[1] == 1) {
+      printf("111");
       snprintf("%s", a[3],(const char*)a[2]);
     }
     break;
