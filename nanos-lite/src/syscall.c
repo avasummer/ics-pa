@@ -8,6 +8,8 @@ void do_syscall(Context *c) {
   a[2] = c->GPR3;
   a[3] = c->GPR4;
 
+#define LOG_CALL(s) Log("calling: %s", s)
+
   switch (a[0]) {
   case SYS_yield: {
     yield();
@@ -15,11 +17,16 @@ void do_syscall(Context *c) {
     return;
   }
   case SYS_exit: {
-    Log("HALT");
+    LOG_CALL("SYS_exit");
     halt(c->GPR1);
     return;
   }
- 
+  case SYS_write: {
+    if (c->GPR1 == 1) {
+      snprintf("%s", c->GPR3,(const char*)c->GPR2);
+    }
+    return;
+  }
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
 
