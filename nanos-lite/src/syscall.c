@@ -19,12 +19,7 @@ void do_syscall(Context *c) {
     halt(c->GPR1);
     return;
   }
-  case SYS_write: {
-    if (c->GPR1 == 1) {
-      snprintf("%s", c->GPR3,(const char*)c->GPR2);
-    }
-    return;
-  }
+ 
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
 
