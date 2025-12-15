@@ -8,8 +8,8 @@ void do_syscall(Context *c) {
   a[2] = c->GPR3;
   a[3] = c->GPR4;
 
-// #define LOG_CALL(s) Log("calling: %s", s)
-#define LOG_CALL(s)
+#define LOG_CALL(...) Log(__VA_ARGS__)
+// #define LOG_CALL(s)
 
   switch (a[0]) {
   case SYS_yield: {
@@ -24,9 +24,8 @@ void do_syscall(Context *c) {
     break;
   }
   case SYS_write: {
-    LOG_CALL("SYS_write");
-    printf("hello");
-    if (c->GPR1 == 1) {
+    LOG_CALL("SYS_write: fd=%d", a[0]);
+    if (a[0] == 1) {
       snprintf("%s", c->GPR3,(const char*)c->GPR2);
     }
     break;
