@@ -1,5 +1,12 @@
 #include <common.h>
 #include <syscall.h>
+int write(const char *str, int len) {
+  char *ptr = (char *)str;
+  int i = 0;
+  for (i = 0; i < len; i++)
+    putch(ptr[i]);
+  return i;
+}
 
 void do_syscall(Context *c) {
   uintptr_t a[4];
@@ -26,8 +33,6 @@ void do_syscall(Context *c) {
   case SYS_write: {
     LOG_CALL("SYS_write: fd=%d", a[1]);
     if (a[1] == 1) {
-      printf("111");
-      snprintf("%s", a[3],(const char*)a[2]);
     }
     break;
   }
