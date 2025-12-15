@@ -33,6 +33,7 @@ void do_syscall(Context *c) {
   case SYS_write: {
     LOG_CALL("SYS_write: fd=%d", a[1]);
     if (a[1] == 1) {
+      write((const char*)a[2], a[3]);
     }
     break;
   }
