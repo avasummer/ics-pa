@@ -15,19 +15,19 @@ void do_syscall(Context *c) {
     LOG_CALL("SYS_YIELD");
     yield();
     c->GPRx = 0;
-    return;
+    break;
   }
   case SYS_exit: {
     LOG_CALL("SYS_exit");
-    halt(c->GPR1);
-    return;
+    halt(a[1]);
+    break;
   }
   case SYS_write: {
     LOG_CALL("SYS_write");
     if (c->GPR1 == 1) {
       snprintf("%s", c->GPR3,(const char*)c->GPR2);
     }
-    return;
+    break;
   }
     default: panic("Unhandled syscall ID = %d", a[0]);
   }
