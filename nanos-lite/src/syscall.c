@@ -15,8 +15,8 @@ void do_syscall(Context *c) {
   a[2] = c->GPR3;
   a[3] = c->GPR4;
 
-// #define LOG_CALL(...) Log(__VA_ARGS__)
-#define LOG_CALL(...)
+#define LOG_CALL(...) Log(__VA_ARGS__)
+// #define LOG_CALL(...)
 
   switch (a[0]) {
   case SYS_yield: {
