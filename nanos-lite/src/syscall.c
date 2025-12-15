@@ -15,8 +15,8 @@ void do_syscall(Context *c) {
   a[2] = c->GPR3;
   a[3] = c->GPR4;
 
-#define LOG_CALL(...) Log(__VA_ARGS__)
-// #define LOG_CALL(...)
+// #define LOG_CALL(...) Log(__VA_ARGS__)
+#define LOG_CALL(...)
 
   switch (a[0]) {
   case SYS_yield: {
@@ -33,10 +33,7 @@ void do_syscall(Context *c) {
   case SYS_write: {
     LOG_CALL("SYS_write: fd=%d ptr=%p len=%d", a[1], a[2], a[3]);
     if (a[1] == 1) {
-      int ret = write((const char *)a[2], a[3]);
-      c->GPRx = ret;
-      Log("return %d",c->GPRx);
-
+      c->GPRx = write((const char *)a[2], a[3]);
     }
     break;
   }
