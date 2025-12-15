@@ -25,6 +25,7 @@ void do_syscall(Context *c) {
   case SYS_write: {
     LOG_CALL("SYS_write");
     if (c->GPR1 == 1) {
+      printf("hello");
       snprintf("%s", c->GPR3,(const char*)c->GPR2);
     }
     break;
