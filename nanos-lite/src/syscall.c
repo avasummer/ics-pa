@@ -20,7 +20,6 @@ void do_syscall(Context *c) {
     return;
   }
   case SYS_write: {
-    Log("Write");
     if (c->GPR1 == 1) {
       snprintf("%s", c->GPR3,(const char*)c->GPR2);
     }
