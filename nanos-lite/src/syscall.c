@@ -33,7 +33,10 @@ void do_syscall(Context *c) {
   case SYS_write: {
     LOG_CALL("SYS_write: fd=%d ptr=%p len=%d", a[1], a[2], a[3]);
     if (a[1] == 1) {
-      c->GPRx = write((const char*)a[2], a[3]);
+      int ret = write((const char *)a[2], a[3]);
+      c->GPRx = ret;
+      Log("return %d",c->GPRx);
+
     }
     break;
   }
